@@ -1,0 +1,10 @@
+precision = 100;
+N   % La demi taille de la suite de bits a transmettre
+nb_bit_max = 10^7; % Le nombre maximal d'itération pour atteindre la précision
+rsbs_dB = (-3:3); % suite de RSB
+bits  %suite aleatoire de bits a transmettre(QPSK)
+
+La fonction retourne en 1er le tableau des TEB (tebs_softP_inter_rs) 
+et en 2e les bits en sortis du décodeur(bits_decodes_RS)
+
+function [tebs_softP_inter_rs,bits_decodes_RS] = softP_inter_rs(bits,N, Nb_erreur_voulu, rsbs_dB, nb_bit_max)%Constantes
