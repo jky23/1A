@@ -1,0 +1,188 @@
+Nom    :Ky					 
+Prénom :Joël Roman
+Groupe : M
+--------------------------------------------------------------------------------
+
+
+Consigne : Dans ce fichier, il faut répondre à la place des "..." et sur les
+lignes qui les suivent.  Le texte déjà écrit doit être conservé !
+
+
+=====[ Raffinages ]=============================================================
+
+-- Ne donner que les niveaux de raffinages qui sont informatifs.   Il est
+-- généralement inutile de donner le dernier niveau de raffinage s'il ne
+-- contient pas d'étapes non élémentaires.
+
+
+R0 :Ecrire le programme qui permet à un joueur humain d'affronter la machine  au jeu des 13 allumettes.
+    Toutes les valeurs saisis au clavier doivent être lus de manière conviviale et fiable
+	    
+
+Exemples : On ne donnera pas d'exemple d'utilisation
+
+R1: Raffinage de R0:
+               -Choix du niveau de l'ordinateur    Niveau: out,caractère
+               -Choix du 1er joueur  y,J1:out, caractère
+               -Deroulement de la partie x,J1:in,caractere
+               -Affichage du gagnant
+
+R2: Raffinage_choix du niveau de l'ordinateur    Niveau:out, caractère
+   Niveau=Lire(Ecrire("Niveau de l'ordinateur (n)aif, (d)istrait, (r)apide ou (e)xpert?"))
+   Selon Niveau Dans
+         'n': Ecrire("Mon niveau est naif.")
+	     'd': Ecrire("Mon niveau est distrait.")
+	     'r': Ecrire("Mon niveau est rapide.")
+	     Autre: Ecrire("Mon niveau est expert.")
+   FinSelon 
+   --niveau de l'ordinateur choisi
+
+ R2: Raffinage_choix du 1er joueur    main: out, caractère  J1:in, booléen
+     main=Lire(Ecrire("Est-ce que  vous commencez (o/n)?"))
+     Si y='o Alors
+              J1-->True
+     Sinon
+              J1-->False
+     FinSi
+     -- Joueur_1 choisi
+
+
+R2: Raffinage_deroulement de la partie     n:in,entier J1: in,booléen
+    n-->13
+    TantQue n#0 Faire
+            Afficher n_allumettes
+	    Si J1=True Alors
+	          Demander a l'utilisateur le nombre d'allumettes qu'il prend et la verifie et actualise le nombre d'allumettes restant
+		      J1--> False
+	    Si J1=False Alors
+	          Ordinateur choisit un nombre aléatoire d'allumettes en fonction du niveau et la verifie et actualise le nombre d'allumettes restant
+		      J1--> True
+		      Ordinateur affiche le nombre d'allumettes qu'il prend
+	    FinSi
+	  --La partie se déroule jusqu'a la fin
+
+R2: Afficher le vainqueur  J1: in, booléen
+    Si J1= True Alors
+       Ecrire ("Vous avez gagné.")
+    Sinon 
+       Ecrire ("J'ai gagné !")
+    FinSi      
+ 
+    
+R3: Raffinage Afficher n_allumettes   n: in, entier
+    Pour i De 1 à 3 Faire
+           Afficher une rangée d'allumettes
+    FinPour 
+            
+
+R4: Raffinage Afficher une rangée d'allumettes   n: in, entier
+    Pour k De 1 à n Faire
+           Si k mod 5 # 0 Alors 
+                     Ecrire("| ")
+           Sinon 
+                     Ecrire("|  ")  --Afficher un espace après 5 allumettes
+           FinSi
+     FinPour
+   
+R3: Raffinage Demander à l'utilisateur le nombre d'allumettes qu'il prend et la verifier et actualiser le nombre d'allumettes   al,n: in, entier   C: in, booléen  
+   Répéter 
+        al=Lire(Ecrire("Combien d'allumettes prenez-vous"))
+	    C-->True
+        Si al>3 Alors
+                 Ecrire("La prise est limitée à 3 allumettes maximum!")
+		         C--> False
+        Si al>n Alors
+                 Si n>1 Alors
+                        Ecrire("Il  reste seulement",n,"allumettes")
+                 SinonSi n=1 Alors
+                        Ecrire("Il reste une seule allumette.")
+                 Sinon
+                        Null
+                 FinSi            
+		         C--> False
+	    Sinon 
+	             Null
+        FinSi
+   Jusqu'à C=True
+   FinTantQue
+   n-->n-al
+   --L'utilisateur a choisi un nombre d'allumettes et le jeu se poursuit
+
+
+
+R3: Raffinage Ordinateur choisit un nombre aleatoire d'allumettes en fonction du niveau, la verifie et actualise le nombre d'allumettes restant n:in entier  al:out,entier  Niveau: in, caractère
+    Selon Niveau Dans:
+    "n":
+             Si n>3 Alors
+	               al-->Resultat(Appel de la fonction Get_Random_Number en ada)
+	         Si n<=3 Alors
+	               Répéter
+		               al--> Resultat(Appel de la fonction Get_Random_Number en ada)
+		           Jusqu'à al<= n
+		           FinRépéter
+	         Sinon
+	              Null
+	         FinSi
+	
+    "d":
+	         Répéter 
+	               al--> Resultat(Appel de la fonction Get_Random_Number en ada)
+	         
+    "r":
+           Si n>3 Alors
+	          al-->3
+	       Sinon
+	          al-->n
+	       FinSi
+	    
+    Autre:
+            Si n=1 Alors
+	            al--> 1
+	        Sinon
+	            Selon (n mod 4) Dans
+	                  0 :
+	                     al-->3
+	                  1 :
+	                     al-->1
+	                  2 :
+	                     al-->1 
+	                  Autre :
+	                     Null        
+	            FinSelon
+	        FinSi
+	
+	FinSelon
+	n--> n-al
+	             
+ --L'ordinateur a choisi un nombre d'allumettes
+
+R4: Raffinage L'ordinateur indique le nombre d'allumettes qu'il a pris  al: in, entier
+   Si al=1 Alors
+      Ecrire("Je prends une allumette.")
+   Sinon
+      Ecrire("Je prends",n," allumettes.")
+   FinSi         
+  
+
+=====[ Tests ]==================================================================
+
+-- Expliquer rapidement comment vous avez testé votre programme.
+
+Apres l'utilisation de la fonction gnatmake j'ai essayé le jeu en jouant tous les niveaux possibles et amener le jeu à toutes les situations susceptibles d'être rencontrés dans le jeu
+
+
+
+=====[ Difficultés ]============================================================
+
+-- Indiquer les difficultés rencontrées et les solutions apportées.
+ Difficultés rencontrés: -Afficher un espace entre les allumettes et les instructions qui invitent l'utilisateur a jouer
+                         -Recommencer a jouer sans relancer le programme 
+ Solutions:              -Utilisation du New_Line
+                         -Utilisation d'une boucle TantQue pour recommencer le jeu si le joueur veut rejouer 
+
+=====[ Remarques diverses ]=====================================================
+
+--Le jeu serait assez pratique si on demandait aussi le nom du joueur au debut et l'afficher si il gagne
+
+
+--------------------------------------------------------------------------------

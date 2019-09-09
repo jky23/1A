@@ -1,0 +1,41 @@
+R0: Ecrire un programme donnant le plus petit et le plus grand element d'une série
+    Test:
+        si serie=[1;2;8;0], le programme retourne min=1 et max=8
+	si serie=[0], le programme affiche 'Pas de valeurs dans la serie'
+	si serie=[2;5;3;9;1;-3], le programme retourne min=1 et max=9
+
+R1: Raffinage de R0
+   -Afficher la consigne
+   -Saisir un premier element de la serie     entier:Int,In
+   -Traiter les autres elements de la serie
+   -Afficher le min et le max    min,max: Int,Out
+
+R2: Afficher la consigne
+    Ecrire("Saisir les valeurs de la serie (-1 pour terminer):")
+
+R2: Saisir un premier entier:
+    entier <-- Lire(Ecrire("Saisir les valeurs de la serie"))
+    Si entier=0 Alors,
+                Ecrire("Pas de valeurs dans la serie")		
+    SiNon Alors
+               min<-- entier
+	       max<--entier
+
+R2:Traiter les autres elements de la serie:
+	       entier<-- Lire(Ecrire("Saisir les valeurs de la serie"))
+	       TantQue entier#0 Alors
+	                       Si entier>max Alors
+			                    max<--entier
+			       SinonSi entier<min Alors
+			                    min<--entier
+			       Sinon
+			       FinSi
+			       entier<-- Lire(Ecrire("Saisir les valeurs de la serie"))
+	       FinTantQue
+
+R2: Afficher le min et le max de la série:
+               Ecrire("min=",min)
+	       Ecrire("max=",max)
+	       {Le programme retourne min et max}
+
+

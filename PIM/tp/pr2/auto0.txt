@@ -1,0 +1,55 @@
+% Validation de http://cregut.svn.enseeiht.fr/2018/1sn/pim/tps/jky/pr2
+% Run on 2018-12-25 09:11:55.575284
+
+# Respect des fichiers fournis
+
+* Fichier tableaux.adb modifié... ok
+* Fichier tableaux.ads modifié... ok
+* Fichier test_tableaux.adb modifié... ok
+* Fichier exemple_tableaux.adb modifié... ok
+* Fichier LISEZ-MOI.txt modifié... ok
+* Running gnatclean... ok
+* Utilisation de Assert dans test_files.adb... ok
+
+  | test_tableaux.adb:        pragma Assert (Taille_Tab(Tab)=5);
+  | test_tableaux.adb:        pragma Assert (N=5) ;
+  | test_tableaux.adb:        pragma Assert ( T1= True) ;
+  | test_tableaux.adb:        pragma Assert (T2=False) ;
+  | test_tableaux.adb:        pragma Assert (Element_Indice (Tab , 2) = 8);
+  | test_tableaux.adb:        pragma Assert (Element_Indice (Tab, 5) = 6);
+  | test_tableaux.adb:        pragma Assert (Taille_Tab(Tab)=3);
+  | test_tableaux.adb:        pragma Assert (not Est_Present (Tab,3)) ;
+  | test_tableaux.adb:        pragma Assert (not Est_Present (Tab,1)) ;
+
+* Compilation de tableaux.adb... ok
+
+  | gcc-7 -c -gnatwa -gnata -g tableaux.adb
+  | tableaux.adb:6:09: warning: no entities of "Ada.Text_IO" are referenced
+  | tableaux.adb:8:09: warning: no entities of "Ada.Integer_Text_IO" are referenced
+
+* Compilation de test_tableaux.adb... ok
+
+  | gcc-7 -c -gnatwa -gnata -g test_tableaux.adb
+  | test_tableaux.adb:4:09: warning: no entities of "Ada.Text_IO" are referenced
+  | test_tableaux.adb:6:09: warning: no entities of "Ada.Integer_Text_IO" are referenced
+  | test_tableaux.adb:59:27: warning: comparison with True is redundant
+  | gnatbind-7 -x test_tableaux.ali
+  | gnatlink-7 test_tableaux.ali -g
+
+* ./test_tableaux < /dev/null... ok
+
+  | 
+
+* Compilation de exemple_tableaux.adb... ok
+
+  | gcc-7 -c -gnatwa -gnata -g exemple_tableaux.adb
+  | exemple_tableaux.adb:4:09: warning: no entities of "Ada.Text_IO" are referenced
+  | exemple_tableaux.adb:6:09: warning: no entities of "Ada.Integer_Text_IO" are referenced
+  | gnatbind-7 -x exemple_tableaux.ali
+  | gnatlink-7 exemple_tableaux.ali -g
+
+* ./exemple_tableaux < /dev/null... ok
+
+  | 
+
+* Running gnatclean... ok

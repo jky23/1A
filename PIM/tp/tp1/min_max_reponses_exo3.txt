@@ -1,0 +1,8 @@
+Question 3.1: Les erreurs signalées sont: erreur de syntaxe(manque des ':' a la fin de la condition Si)
+              Le programme ne contient pas d'autres erreurs apres la compilation 
+Question 3.2 Le programme signale:
+             manque de then en fin de la ligne 33
+	     mauvaise saisie de Entier en ligne 38
+	     Ces erreurs n'étaient pas présentes dans le programme Python 
+	     Elles ont été détectées parce que le programme ada a un typage plus fort.
+Question 3.3 le typage statique permet d'éviter les erreurs dans le choix des variables et eviter les erreurs de compilations

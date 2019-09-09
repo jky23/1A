@@ -1,0 +1,249 @@
+% Questions sur le projet 13 allumettes
+% Auteur :Ky Joël Roman
+% Date   :10/10/2018
+
+Ce questionnaire vous permet d'expliquer comment vous pourriez prendre en
+compte des évolutions simples du cahier des charges.  Le but est de vous faire
+prendre du recul sur le programme que vous avez écrit et sur la facilité (ou
+les difficultés) que vous auriez à prendre en compte les évolutions
+envisagées.  Aucune modification de votre programme n'est demandée.
+
+Pour chacune des évolutions listées ci-dessous, indiquez comment elles peuvent
+être prises en compte dans votre programme ou ce qu'il faudrait changer pour
+qu'elles puissent être prises en compte facilement.  Les réponses doivent être
+concises et précises et, en particulier, indiquer les numéros des lignes
+concernées du programme.
+
+Merci de répondre à la place des « ... » en laissant une ligne blanche avant
+votre réponse et deux après.
+
+
+# Changer le nombre initial d'allumettes en prenant 17 (ou 21, ou 24, etc.).
+
+ligne 56: n:= 17 (ou n:=21; n:=24)
+
+
+# Proposer au joueur de choisir le nombre initial d'allumettes.
+
+ligne 56: Put ("Combien d'allumettes prenez-vous ?");
+          Get(n);
+
+
+# Afficher les allumettes sur une hauteur de 5 au lieu de 3.
+
+ligne 60: for Indice in 1..5 loop
+
+
+# Grouper les allumettes par 3 et non par 5.
+
+ligne 63: if Indice mod 3 /= 0 then
+
+
+# Prendre en compte un nouveau niveau de jeu pour l'ordinateur (par exemple,
+un niveau « lent » où l'ordinateur prend toujours 1 seule allumette).
+
+ligne 33: Put("Niveau de l'ordinateur (l)ent, (n)aif, (d)istrait, (r)apide ou (e)xpert ? ");
+
+Ajouter apres la ligne 36 et en respectant l'indentation du case:
+     when 'l' => Put("Mon niveau est lent.");
+Ajouter après la ligne 101 et en respectant l'indentation du case:
+     --l'ordinateur joue en mode lent
+     when 'l' =>
+             al:=1;
+
+
+# Changer le mode de saisie du niveau de l'ordinateur : au lieu de saisir une
+lettre (l'initial du niveau), l'utilisateur entre un numéro : 1 pour (n)aïf, 2
+pour (d)istrait, 3 pour (r)apide et 4 pour e(x)pert.
+
+ligne 33: Put("Niveau de l'ordinateur 1 pour (n)aif, 2 pour (d)istrait, 3 pour (r)apide ou 4 pour e(x)pert ? ");
+
+ligne 36: case Niveau is
+ligne 37:            when 'n'  => Put_Line("Mon niveau est naïf.");
+ligne 38:	         when 'd'  => Put_Line("Mon niveau est distrait.");
+ligne 39:            when 'r'  => Put_Line("Mon niveau est rapide.");
+ligne 40:	         when others => Put_Line("Mon niveau est expert.");
+ligne 41: end case;
+
+ligne 103: when 1 =>
+ligne 117: when 2 =>
+ligne 123: when 3 =>
+ligne 131: when 4 =>
+ligne 148: when others=>
+                         Null;
+                         
+
+# On décide d'avoir une IHM en anglais avec (s)illy pour naif, (d)reamy pour
+distrait, (q)uick pour rapide et (e)xpert pour expert.  Quelles sont les
+incidences sur votre programme au delà de la traduction des messages en
+anglais ?
+
+Il va falloir en plus de traduire les mots, modifier les structures selon des boucles case utilisant le choix de niveau
+ligne 33: Put("Computer level (s)illy, (d)reamy, (q)uick or (e)xpert ? ");
+ligne 36: case Niveau is
+ligne 37:            when 's'  => Put_Line("My level is silly.");
+ligne 38:	         when 'd'  => Put_Line("My level is dreamy.");
+ligne 39:            when 'q'  => Put_Line("My level is quick.");
+ligne 40:	         when others => Put_Line("My level is expert.");
+ligne 41: end case;
+
+ligne 44: Put("Do you begin ? (f/n) ? ");
+
+ligne 49: if main='y' then 
+
+ligne 173: Put_Line("Do you want to replay ? (y)es or (n)o");
+ligne 177: if rejouer='y' then
+
+ligne 103: when s =>
+ligne 117: when d =>
+ligne 123: when q =>
+ligne 131: when others=>
+
+
+# Donner la possibilité au joueur d'abandonner la partie en tapant 0 quand on
+lui demande le nombre d'allumettes qu'il veut prendre.
+
+ligne 76: Put("Combien d'allumettes prenez-vous (0 pour abandonner) ?");
+
+Après la ligne 96 effacer la ligne 97 et ecrire
+if al=0 then 
+       n:=0;
+else       
+       n:= n-al;
+end if;       
+       
+
+
+# Chaque joueur peut être soit l'ordinateur, soit un humain.  Ainsi, il est
+possible de faire jouer l'ordinateur contre lui-même ou un joueur humain
+contre un autre joueur humain.
+
+Supprimez les lignes 13 et 14 
+ligne 21: y : Integer --nombre de joueurs
+          type T_Joueur is (Joueur1, Joueur2, Ordinateur1, Ordinateur2);  --les differents joueurs possibles
+          tour : T_Joueur --Joueur qui a la main     
+          Niveau, Niveau1, Niveau2 : Character   --les modes de jeux de l'ordinateur
+ligne 42: Put_Line("Combien de joueurs (1 pour 1 joueur, 2 pour 2 joueurs, 0 pour l'ordinateur contre l'ordinateur);
+          Get(y);
+          Skip_Line;
+          if y=0 then
+                J1:=Ordinateur1;
+                J2:=Ordinateur2;
+                Put("Niveau de l'ordinateur (n)aif, (d)istrait, (r)apide ou (e)xpert ? ");
+                Get(Niveau1);
+                case Niveau1 is
+                            when 'n'  => Put_Line("Niveau Ordinateur1 est naïf.");
+	                        when 'd'  => Put_Line("Niveau Ordinateur1 est distrait.");
+                            when 'r'  => Put_Line("Niveau Ordinateur1 est rapide.");
+	                        when others => Put_Line("Niveau Ordinateur1 est expert.");
+	            end case;
+                Skip_Line;
+                Put("Niveau de l'ordinateur (n)aif, (d)istrait, (r)apide ou (e)xpert ? ");
+                Get(Niveau2);
+                Skip_Line;
+                case Niveau1 is
+                            when 'n'  => Put_Line("Niveau Ordinateur1 est naïf.");
+	                        when 'd'  => Put_Line("Niveau Ordinateur1 est distrait.");
+                            when 'r'  => Put_Line("Niveau Ordinateur1 est rapide.");
+	                        when others => Put_Line("Niveau Ordinateur1 est expert.");
+	            end case;
+          elsif y=2 then
+                J1:=Joueur1;
+                J2:=Joueur2;
+          else
+                J1:=Joueur1;
+                J2:=Ordinateur1;
+                Put("Niveau de l'ordinateur (n)aif, (d)istrait, (r)apide ou (e)xpert ? ");
+                Get(Niveau1);
+                Skip_Line;
+                case Niveau1 is
+                             when 'n'  => Put_Line("Niveau Ordinateur1 est naïf.");
+	                         when 'd'  => Put_Line("Niveau Ordinateur1 est distrait.");
+                             when 'r'  => Put_Line("Niveau Ordinateur1 est rapide.");
+	                         when others => Put_Line("Niveau Ordinateur1 est expert.");
+	            end case;
+          end if;
+          
+                     
+          Put("Est-ce que vous commencez (o/n) ? ");
+          Get(main);
+          Skip_Line;
+          New_Line;
+          if main='o' then
+                    tour:= J1; --Le joueur1 a la main
+          else
+                    tour:= J2; --L'ordinateur a la main
+	      end if;
+	      
+	      
+	      
+ligne 73: if tour=Joueur1 or tour=Joueur2 then
+
+ligne 98: case y is
+                   when 1 =>
+                         tour:=Ordinateur1;    --la main passe à l'ordinateur
+                   when 2 =>
+                         if tour=Joueur1 then
+                                        tour:=Joueur2;  --la main passe au joueur2
+                         else
+                                        tour:=Joueur1;   --la main passe au joueur1
+                         end if;                                               
+                   when others =>
+                         Null;
+           end case;
+           
+ligne 99: elsif tour=Ordinateur1 or tour=Ordinateur2 then                       
+
+Effacer la ligne 151 et écrire:                         
+ligne 151: case y is
+                   when 1 =>
+                         tour:=Joueur1;   --la main passe au joueur1
+                   when 0 =>
+                         if tour=Ordinateur1 then 
+                                            tour:= Ordinateur2;   --la main passe a l'ordinateur2
+                                            Niveau:= Niveau2;     --le niveau de jeu est celui de l'ordinateur2
+                         else
+                                            tour:= Ordinateur1;   --la main passe a l'ordinateur1
+                                            Niveau:= Niveau1;     --le niveau de jeu est celui de l'ordinateur1 	      
+                         end if;
+                   when others =>
+                         Null;
+            end case;                   	     
+	     
+      
+ligne 158: else
+               Null;
+           end if;   
+           
+Supprimer les lignes 168 a 172 et ecrire
+ligne 168: case tour is 
+                    when Joueur1 => 
+                                  Put_Line("Joueur1 a gagné.");
+                    when Joueur2 =>
+                                  Put_Line("Joueur2 avez gagné.");
+                    when Ordinateur1 =>
+                                  Put_Line("Ordinateur1 a gagné.");
+                    when Ordinateur2 =>
+                                  Put_Line("Ordinateur2 a gagné.");
+                    when others =>
+                               Null;
+           end case;
+           
+                                          
+# Après avoir vu le cours sur les types utilisateurs, quelle serait la bonne
+manière de représenter le niveau de l'ordinateur ?
+
+Utiliser un type enuméré serait la bonne manière de representer le niveau de l'ordinateur
+ligne 26: type T_Niveau is (naif, distrait, rapide, expert);
+
+
+# Temps passé sur le projet.
+
+À titre indicatif (la réponse ne sera bien sûr pas prise en compte
+dans la notation), combien de temps avez-vous (en dehors des 2 TP
+à l'EDT) passé sur :
+
+- la compréhension du sujet, la  conception et les raffinages : 02 heures
+- la programmation en Ada et la mise au point : 05 heures
+- la réponse à ce questionnaire : 03 heures
+

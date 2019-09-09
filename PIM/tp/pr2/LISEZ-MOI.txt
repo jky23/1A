@@ -1,0 +1,28 @@
+Nom    : Ky
+Prénom : Joël Roman
+Groupe : M
+--------------------------------------------------------------------------------
+
+
+Consigne : Dans ce fichier, il faut répondre à la place des "..." et sur les
+lignes qui les suivent.  Le texte déjà écrit doit être conservé !
+
+=====[ Informations ]===========================================================
+
+Temps passé sur le projet : 10 heures (en plus de la séance de TP prévue)
+
+
+=====[ Difficultés ]============================================================
+
+-- Indiquer les difficultés rencontrées et les solutions apportées.
+
+...Difficulté à instancier la procedure générique avec une procedure générique en paramètre.
+Utilisation de l'exemple des modules génériques pour definir correctement et instancier correctement la procedure générique.
+...Difficulté rencontrés lors de l'utilisation de deux modules de types et tailles différents à cause de la surcharge => Utilisation de prefixe spécifiant le nom du module avant l'utilisation du type ou du sous-programme du module correspondant
+
+
+=====[ Remarques diverses ]=====================================================
+
+...Pas de remarques particulières.
+
+--------------------------------------------------------------------------------
