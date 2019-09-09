@@ -1,0 +1,23 @@
+
+(* Produit : session 1 2018 *)
+
+module Produit
+
+  use import int.Int
+  use import ref.Refint
+
+  let produit (a b : int) : int
+    requires { (0<= a & 0 <= b) }
+    ensures  { (r=a*b) }
+  =
+    let i = ref b in
+    let r = ref 0 in
+    while  (0 < !i) do
+      invariant { (r=a*(b-i)) }
+      variant   { (i) }
+      i := (!i) - 1;
+      r := a + (!r) 
+    done;
+    !r
+(* INDIQUER EN COMMENTAIRE LES COMMANDES UTILISÉES POUR RÉALISER LA PREUVE *
+end

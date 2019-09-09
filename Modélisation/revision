@@ -1,0 +1,125 @@
+Section CalculPropositionnel.
+
+Variable phi A B C psi chi E Y R : Prop.
+
+Theorem Thm00 : A /\ B -> B /\ A.
+intro H.
+split.
+cut ( A /\ B).
+intro H1.
+elim H1.
+intros HA HB.
+exact HB.
+exact H.
+cut ( A /\ B).
+intro H1.
+elim H1.
+intros HB HA.
+exact HB.
+exact H.
+Qed.
+
+
+
+
+Theorem Thm_1 : ((phi \/ psi) -> chi) -> (psi -> chi).
+intro H.
+intro H1.
+cut ( phi \/ psi).
+exact H.
+right.
+exact H1.
+Qed.
+
+Theorem Thm_2 : phi -> ~~phi.
+intro H.
+unfold not.
+intro H1.
+cut phi.
+exact H1.
+exact H.
+Qed.
+
+Theorem Coq_E_imp : ((phi -> psi) /\ phi) -> psi.
+intro H.
+cut phi.
+cut ((phi -> psi) /\ phi).
+intro H1.
+elim H1.
+intros Hp Hf.
+exact Hp.
+exact H.
+cut ((phi -> psi) /\ phi).
+intro H1.
+elim H1.
+intros Hp Hf.
+exact Hf.
+exact H.
+Qed.
+
+Theorem Coq_E_et_g : (phi /\ psi) -> phi.
+intro H.
+cut (phi /\ psi).
+intro H1.
+elim H1.
+intros Hp Hf.
+exact Hp.
+exact H.
+Qed.
+
+
+Theorem Coq_E_ou : ((phi \/ psi) /\ (phi -> chi) /\ (psi -> chi)) -> chi.
+intro H.
+elim H.
+intros H1 H2.
+elim H1.
+cut ((phi -> chi) /\ (psi -> chi)).
+intro HA.
+elim HA.
+intros Hp Hf.
+exact Hp.
+exact H2.
+cut ((phi -> chi) /\ (psi -> chi)).
+intro HA.
+elim HA.
+intros Hp Hf.
+exact Hf.
+exact H2.
+Qed.
+
+Theorem EXO_1 : (( A -> C) \/ (B -> C)) -> ((A /\ B) -> C).
+intro H1.
+intro H2.
+elim H1.
+
+intros HA.
+cut A.
+exact HA.
+elim H2.
+intros H3 H4.
+exact H3.
+intros HB.
+cut B.
+exact HB.
+elim H2.
+intros H3 H4.
+exact H4.
+Qed.
+
+Theorem EXO_2 : ( A -> B) -> ((~C -> ~B)->(A->C)).
+intro H1.
+intro H2.
+intro H3.
+cut False.
+intro H.
+contradiction.
+absurd (A).
+cut False.
+intro H. 
+contradiction.
+cut(B \/ ~B).
+intro H.
+
+trivial.
+
+

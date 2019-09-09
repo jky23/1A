@@ -1,0 +1,62 @@
+Section CalculPredicats.
+Variable A B phi psi : Type.
+
+Theorem Thm_8 : forall (phi psi : A -> Prop),
+(forall x : A, (phi x) /\ (psi x))
+-> (forall x : A, (phi x)) /\ (forall x : A, (psi x)).
+intro H.
+intro H1.
+intro H2.
+
+split.
+intro x.
+cut (H x /\ H1 x).
+intro H3.
+elim H3.
+intro Ha.
+intro Hb.
+exact Ha.
+generalize x.
+
+
+exact H2.
+intro x.
+cut (H x /\H1 x).
+intro H3.
+elim H3.
+intros Ha Hb.
+exact Hb.
+generalize x.
+exact H2.
+Qed.
+
+Theorem Thm_9 : forall (phi : A -> B -> Prop),
+(exists x : A, forall y : B, (phi x y))
+->  forall y : B, exists x : A, (phi x y).
+intro H.
+intro H1.
+intro H2.
+elim H1.
+intro x.
+intro H3.
+exists x.
+generalize H2.
+exact H3.
+Qed.
+
+Theorem Thm_10 : forall (phi psi : A -> Prop),
+(exists x : A, (phi x) -> (psi x))
+-> (forall x : A, (phi x))  ->  exists x : A, (psi x).
+intros H H1 H2 H3.
+
+elim H2.
+intro x.
+
+intro H5.
+
+exists x.
+cut (H x).
+exact H5.
+generalize x.
+exact H3.
+Qed.

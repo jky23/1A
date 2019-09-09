@@ -1,0 +1,50 @@
+(* Ouverture d’une section *)
+Section CalculPropositionnel.
+(* Les régles de la déduction naturelle doivent être ajoutées à Coq. *)
+Require Import Naturelle.
+(* Déclaration de variables propositionnelles *)
+Variable phi psi chi E Y R : Prop.
+Variables A B C : Prop.
+Theorem Thm00 : A /\ B -> B /\ A.
+I_imp HAetB.
+I_et.
+E_et_d A.
+Hyp HAetB.
+E_et_g B.
+Hyp HAetB.
+Qed.
+
+Print Thm00.
+Theorem Thm_1 : ((A \/ B) -> C) -> (B -> C).
+
+I_imp H1.
+I_imp H2.
+E_imp (A \/ B) .
+Hyp H1.
+I_ou_d .
+Hyp H2 .
+Qed.
+
+Print Thm_1.
+
+Theorem Thm_2 : A -> ~~A.
+
+I_imp H1.
+I_non H2.
+E_non A.
+Hyp H1.
+Hyp H2 .
+Qed.
+
+Print Thm_2.
+
+Theorem Thm_3 : (A -> B) -> (~B -> ~A).
+I_imp H1.
+I_imp H2.
+I_non H3.
+I_antiT B.
+I_imp A.
+Qed.
+
+
+

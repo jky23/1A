@@ -1,0 +1,24 @@
+
+(* Factorielle : Algorithme descendant *)
+
+module FactorielleDescendant
+
+  use int.Int
+  use int.Fact
+  use ref.Refint
+
+  let factorielle (n: int) : int
+    requires { 0 <= n }
+    ensures  { result = (fact n) }
+  =
+    let i = ref n in
+    let r = ref 1 in
+    while  (0 < !i) do
+      invariant { COMPLETER }
+      variant   { COMPLETER }
+      r := !i * !r;
+      i := !i - 1
+    done;
+    !r
+
+end
