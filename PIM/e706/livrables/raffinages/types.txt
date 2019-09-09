@@ -1,0 +1,47 @@
+-- KJR -- Des commentaires explicatifs sont toujours appréciables dans la def des types
+
+TYPE P_arb EST POINTEUR SUR T_arb
+
+TYPE T_arb EST ENREGISTREMENT
+     Frequence : Entier
+     Caractere : Caractere
+     Sous_arbre_gauche : P_arb
+     Sous_arbre_droit : P_arb
+     --Invariant
+     --Pour un noeud donné de l'arbre
+     --Sous_arbre_gauche^.Frequence =< Sous_arbre_droit^.Frequence
+     --Sous_arbre_gauche = Null <=> Sous_arbre_droit = Null
+FIN ENREGISTREMENT
+
+--liste chainée d'enregistrements d'un caractère et de sa fréquence dans le texte
+TYPE P_Tab_freq EST POINTEUR SUR T_Tab_freq
+
+TYPE T_Tab_freq EST ENREGISTREMENT
+     Caractere : Caractere
+     Frequence : Entier
+     Suivant : P_Tab_freq
+FIN ENREGISTREMENT
+
+TYPE T_list_arb EST POINTEUR SUR List_arb
+
+--liste chainée d'arbres
+TYPE List_arb EST ENREGISTREMENT
+	 arbre : P_arb
+	 Suivant : T_list_arb
+FIN ENREGISTREMENT
+
+
+TYPE P_code EST POINTEUR SUR T_code
+
+--liste chainée d'enregistrement d'un caractère et son code dans l'arbre de Huffman
+TYPE T_code EST ENREGISTREMENT
+	 Caractere : Caractere
+	 Code : P_string
+	 Suivant : P_code
+FIN ENREGISTREMENT
+
+TYPE P_string EST POINTEUR SUR T_string
+TYPE T_string EST ENREGISTREMENT 
+	 Caractere : Caractere
+	 Suivant : P_string
+FIN ENREGISTEMENT

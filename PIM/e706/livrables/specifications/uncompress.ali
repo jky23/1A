@@ -1,0 +1,181 @@
+V "GNAT Lib v4.9"
+M P W=b
+A -O2
+A -g
+A -gnatA
+P SS ZX
+
+RN
+RV NO_EXCEPTION_HANDLERS
+RV NO_EXCEPTIONS
+RV NO_IO
+RV NO_SECONDARY_STACK
+RV NO_STANDARD_STORAGE_POOLS
+RV NO_UNCHECKED_ACCESS
+RV NO_DEFAULT_INITIALIZATION
+RV NO_IMPLEMENTATION_ATTRIBUTES
+RV NO_IMPLEMENTATION_PRAGMAS
+RV SPARK_05
+
+U uncompress%b		uncompress.adb		0915a4d7 NE OO SU IL
+W ada%s			ada.ads			ada.ali
+W ada.command_line%s	a-comlin.adb		a-comlin.ali
+W ada.exceptions%s	a-except.adb		a-except.ali
+W ada.integer_text_io%s	a-inteio.ads		a-inteio.ali
+W ada.io_exceptions%s	a-ioexce.ads		a-ioexce.ali
+W ada.sequential_io%s
+W ada.tags%s		a-tags.adb		a-tags.ali
+W ada.text_io%s		a-textio.adb		a-textio.ali
+Z ada.text_io.modular_aux%s  a-timoau.adb	a-timoau.ali
+W ada.text_io.modular_io%s
+Z ada.unchecked_conversion%s
+W arbre%s		arbre.adb		arbre.ali
+W chaine%s		chaine.adb		chaine.ali
+Z interfaces%s		interfac.ads		interfac.ali
+Z interfaces.c_streams%s  i-cstrea.adb		i-cstrea.ali
+W liste_arbre%s		liste_arbre.adb		liste_arbre.ali
+Z system%s		system.ads		system.ali
+Z system.byte_swapping%s  s-bytswa.ads		s-bytswa.ali
+Z system.crtl%s		s-crtl.ads		s-crtl.ali
+Z system.file_control_block%s  s-ficobl.ads	s-ficobl.ali
+Z system.file_io%s	s-fileio.adb		s-fileio.ali
+W system.secondary_stack%s  s-secsta.adb	s-secsta.ali
+Z system.sequential_io%s  s-sequio.adb		s-sequio.ali
+Z system.storage_elements%s  s-stoele.adb	s-stoele.ali
+W system.unsigned_types%s  s-unstyp.ads		s-unstyp.ali
+W tab_freq%s		tab_freq.adb		tab_freq.ali
+W table_code%s		table_code.adb		table_code.ali
+
+D ada.ads		20070406091342 3ffc8e18
+D a-comlin.ads		20140225151544 ea62afbc
+D a-except.ads		20140129161953 f86a4103
+D a-finali.ads		20111121113555 52ecdc1b
+D a-inteio.ads		20070406091342 f64b89a4
+D a-ioexce.ads		20140225151544 e4a01f64
+D a-sequio.ads		20090409150019 7b5d9d38
+D a-sequio.adb		20140219144026 ed424daa
+D a-stream.ads		20140122164720 1a984740
+D a-tags.ads		20111212115430 6c0509d0
+D a-textio.ads		20140129155348 386df5d4
+D a-tiinio.ads		20090409150019 aa04e5d6
+D a-timoau.ads		20090409150019 01c06610
+D a-timoio.ads		20090409150019 d32407b9
+D a-timoio.adb		20090409150019 de0ea1c6
+D a-unccon.ads		20070406091342 f9eb8f06
+D arbre.ads		20181217165455 cf28e3d3
+D chaine.ads		20181217194437 84608299
+D interfac.ads		20140225151838 69adb1b9
+D i-cstrea.ads		20130412125801 8128536b
+D liste_arbre.ads	20181217090645 03913358
+D system.ads		20141119215827 90249111
+D s-bytswa.ads		20120712104318 799c7440
+D s-crtl.ads		20140225151544 840e6817
+D s-exctab.ads		20140225151139 54135002
+D s-ficobl.ads		20120709130952 55a71d43
+D s-fileio.ads		20120709130952 45ce2f0f
+D s-finmas.ads		20140225151139 814daec4
+D s-finroo.ads		20120426095924 4ff27390
+D s-parame.ads		20140225151139 ab8cb46a
+D s-pooglo.ads		20110804083314 542f33d0
+D s-secsta.ads		20140225151139 86a2856d
+D s-sequio.ads		20090409150019 fc7560a7
+D s-soflin.ads		20140225151139 aa763b52
+D s-stache.ads		20140225151139 a37c21ec
+D s-stalib.ads		20140225151139 a891183f
+D s-stoele.ads		20140225151139 2dc34a04
+D s-stoele.adb		20140225151139 ed88f8fb
+D s-stopoo.ads		20131010103753 b16154c2
+D s-traent.ads		20140225151139 b5116092
+D s-unstyp.ads		20140225151139 510692af
+D s-wchcon.ads		20140225151139 1b7d22d2
+D tab_freq.ads		20181203093808 25305a02
+D table_code.ads	20181217184055 505bf84a
+D uncompress.adb	20181219154455 8f1e051d
+X 1 ada.ads
+16K9*Ada 19e8 45|6r6 7r6 7r23 8r6 8r31 9r6 9r28 10r6 13r27 18r26 23r13
+X 2 a-comlin.ads
+38K13*Command_Line 139e21 45|9w10 9r32
+41V13*Argument_Count{natural} 45|33s8
+48V13*Argument{string} 45|35s29
+X 5 a-inteio.ads
+18K13*Integer_Text_IO[12|45] 45|8w10 8r35
+X 6 a-ioexce.ads
+18K13*IO_Exceptions 30e22 45|6w10
+X 7 a-sequio.ads
+43k13*Sequential_IO 158e22 45|10w10 13r31
+53P9 File_Type<33|63P9> 45|22r19[13]
+55E9 File_Mode
+55n23 In_File{55E9[45|13]} 45|35r20[13]
+76U14 Open 45|35s9[13]
+82U14 Close 45|150s5[13]
+97U14 Read 45|40s20[13] 55s16[13] 70s20[13] 88s16[13] 126s16[13]
+100V13 End_Of_File{boolean} 45|125s15[13]
+X 11 a-textio.ads
+49K13*Text_IO 471e16 45|7w10 7r27 18r30 23r17
+52P9*File_Type 45|23r25
+53n32*Out_File{53E9} 45|121r19
+86U14*Create 45|121s5
+98U14*Close 45|151s5
+165U14*New_Line 45|136s17
+166U14*New_Line 45|83s5
+207U14*Put 45|139s21
+X 14 a-timoio.ads
+45k21*Modular_IO 84e27 45|18r38
+X 17 arbre.ads
+6K9*Arbre 76e10 45|1w6 1r16
+8P10*P_arb 45|29r19
+11U15*Initialiser_arbre 45|109s5
+19V14*Creer_noeud{8P10} 45|110s20
+47U15*Afficher_arbre 45|153s5
+57U15*Recons_arb 45|111s5
+X 18 chaine.ads
+3K9*Chaine 65e11 45|3w6 3r18
+6P10*P_string 45|27r50
+7M10*t_bit 45|13r45 18r49 24r15
+10U15*Initialiser_chaine 45|115s5 122s5 145s13
+17U15*Ajout_caract 45|78s9 91s13 95s13 128s13 130s13
+32U15*Supprimer_chaine 45|144s13
+44U15*Afficher_chaine 45|82s5 104s5
+X 21 liste_arbre.ads
+11K9*Liste_arbre 60e16 45|2w6 2r23
+X 33 s-sequio.ads
+63P9*File_Type(43R9)
+X 43 tab_freq.ads
+1K9*Tab_Freq 39e13 45|4w6 4r20
+X 44 table_code.ads
+4K9*Table_Code 49e15 45|5w6 5r22
+6P14*P_Code 45|30r16
+9U19*Initialiser_Table 45|116s5
+21V18*Est_Present_Code{boolean} 45|133s12
+24V18*Caractere_Par_Code{character} 45|134s21
+31U19*Afficher 45|154s5
+35U19*Creer_Table 45|117s5
+X 45 uncompress.adb
+12U11*uncompress 12b11 161l5 161t15
+13K13 Bin_IO[7|43] 14r9 22r12 40r13 55r9 70r13 88r9 126r9
+18K13 ES_IO[14|45] 19r9
+22p5 file{7|53P9[13]} 35m14 35r14 40r25 55r21 70r25 88r21 125r27 126r21 150m11
+. 150r11
+23p5 texte{11|52P9} 121m12 121r12 136r26 139r25 151m11 151r11
+24m5 binaire{18|7M10} 40m30 41r16 43r19 55m26 56r12 58r15 70m30 71r16 73r19
+. 88m26 89r12 126m26 127r12
+25e5 char{character} 77m9 78r34 90m13 91r38 94m13 95r38 134m13 135r16 139r31
+26i5 taille_texte{integer} 38m9 42m17 42r33 44m17 44r33
+26i19 taille_arbre{integer} 53m5 57m13 57r29 59m13 59r29 65r17 87r22
+26i33 nbre_carac{integer} 86m5 87r11 98m17 98r31
+26i45 ascii{integer} 68m9 72m17 72r26 74m17 74r26 77r31
+26i52 compteur{integer} 152m5 153m33 153r33
+27p5 code{18|6P10} 115m24 115r24 117m38 117r38
+27p11 liste_char{18|6P10} 78m23 78r23 82r21 111m29 111r29
+27p23 descrip_arb{18|6P10} 91m26 91r26 95m26 95r26 104r21 111m16 111r16
+27p36 code_caract{18|6P10} 122m24 122r24 128m26 128r26 130m26 130r26 133r38
+. 134r49 144m30 144r30 145m32 145r32
+28b5 bool{boolean} 92m13 96r16 97m17
+28b11 Premier_caractere{boolean} 123m5 138r20 141m21
+29p5 arb_huffman{17|8P10} 109m23 109r23 110m5 111m41 111r41 117r26 153r20
+30p5 tab_huff{44|6P14} 116m23 116r23 117m17 117r17 133r29 134r40 154r14
+39i13 i{integer}
+54i9 i{integer}
+65i9 i{integer}
+69i13 j{integer}
+

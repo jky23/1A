@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<Locations>
+  <Project>
+    <vfs_file>/home/jky/Annee_1/PIM/e706/livrables/specifications/default.gpr</vfs_file>
+    <file_marker column=" 9" line=" 37" >
+      <vfs_file>/home/jky/Annee_1/PIM/e706/livrables/specifications/compress.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_file>/home/jky/Annee_1/PIM/e706/livrables/specifications/compress.adb</vfs_file>
+    </file_marker>
+    <file_marker current="true" column=" 1" line=" 1" >
+      <vfs_file>/home/jky/Annee_1/PIM/e706/livrables/specifications/uncompress.adb</vfs_file>
+    </file_marker>
+  </Project>
+</Locations>

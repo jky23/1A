@@ -1,0 +1,54 @@
+-- KJR -- manque les flux (paramètres des étapes en in, out ou in out)
+-- les étapes de R3 devraient être définies pour lever des ambiguïtés. 
+
+R0 : Raffinage de la compression par le codage de Huffman
+
+R1 : Raffinage de R0
+     - Construire le tableau de fréquences (en parcourant le texte)
+     - Construire l'arbre de Huffman
+     - Construire la table de Huffman 
+     - Encoder le fichier compressé
+
+R2 : Construire le tableau de fréquences
+     - Parcourir le texte caractère par caractère
+     - A chaque caractère, s'il n'est pas présent dans le tableau,
+     le rajouter, s'il est présent, incrémenter la valeur correspondant à sa fréquence
+     
+R2 : Construire l'arbre de Huffman
+	 - Initialiser le tableau de Huffman (c'est-à-dire faire l'étape correspondant à la figure 1)
+	 en parcourant le tableau de fréquences et en plaçant les feuilles dans l'ordre croissant des fréquences,
+	 on se servira d'un sous-programme servant à placer un élément au "bon endroit"
+-- KJR -- l'étape suivante doit être raffinée, elle présente plusieurs étapes complexes. 
+	 - Faire les noeuds 1 par 1, et après avoir fait un noeud, le replacer dans l'arbre (après avoir retirer de la table les deux feuilles/noeuds utilisés)
+	 
+R2 : Construire la table de Huffman
+-- KJR -- Comment parcourir l'arbre ? Combien de fois ? 
+	 - Pour chaque caractère, parcourir l'arbre à la recherche de ce caractère, une fois le bon chemin trouvé,
+	 le retranscrire sous la forme d'un code à l'aide d'une variable ayant mémorisé ce chemin au préalable
+	 - Insérer ainsi chaque caractère et son code dans la table
+
+R2 : Encoder le fichier compressé
+	 - coder la taille du fichier
+	 - coder la taille de l'arbre (à partir du nombre d'éléments de la table)
+	 - mémoriser les caractères utilisés présent dans la table
+	 - encoder la description de l'arbre
+	 - générer le fichier compressé en remplaçant chaque caractère du texte par son code dans la table de Huffman
+	
+R3 : Initialiser le tableau de Huffman
+
+R3 : Faire les noeuds 1 par 1 et placer les noeuds dans l'arbre
+
+R3 : Obtenir le code d'un caractère par parcours de l'arbre
+
+R3 : Inserer chaque caractère et son code dans l'arbre
+
+R3 : Coder la taille du fichier
+
+R3 : Coder la taille de l'arbre
+
+R3 : Memoriser les caractères utilisés présentq dans la table
+
+R3 : Encoder la description de l'arbre
+
+R3 : generer le fichier compressé
+	 

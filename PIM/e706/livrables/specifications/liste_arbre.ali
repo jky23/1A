@@ -1,0 +1,107 @@
+V "GNAT Lib v4.9"
+A -O2
+A -g
+A -gnatA
+P ZX
+
+RN
+RV NO_ALLOCATORS
+RV NO_IO
+RV NO_IMPLICIT_CONDITIONALS
+RV NO_LOCAL_ALLOCATORS
+RV NO_RECURSION
+RV NO_STANDARD_STORAGE_POOLS
+RV NO_UNCHECKED_DEALLOCATION
+RV NO_DEFAULT_INITIALIZATION
+RV NO_IMPLEMENTATION_PRAGMAS
+RV SPARK_05
+
+U liste_arbre%b		liste_arbre.adb		a8612499 NE OO PK
+W ada%s			ada.ads			ada.ali
+W ada.tags%s		a-tags.adb		a-tags.ali
+W ada.text_io%s		a-textio.adb		a-textio.ali
+W ada.unchecked_deallocation%s
+W arbre%s		arbre.adb		arbre.ali
+
+U liste_arbre%s		liste_arbre.ads		48d95212 EE NE OO PK
+W arbre%s		arbre.adb		arbre.ali
+W chaine%s		chaine.adb		chaine.ali
+
+D ada.ads		20070406091342 3ffc8e18
+D a-except.ads		20140129161953 f86a4103
+D a-finali.ads		20111121113555 52ecdc1b
+D a-ioexce.ads		20140225151544 e4a01f64
+D a-stream.ads		20140122164720 1a984740
+D a-tags.ads		20111212115430 6c0509d0
+D a-textio.ads		20140129155348 386df5d4
+D a-unccon.ads		20070406091342 f9eb8f06
+D a-uncdea.ads		20070406091342 f15a5ed1
+D arbre.ads		20181217165455 cf28e3d3
+D chaine.ads		20181217194437 84608299
+D interfac.ads		20140225151838 69adb1b9
+D i-cstrea.ads		20130412125801 8128536b
+D liste_arbre.ads	20181217090645 03913358
+D liste_arbre.adb	20181217090543 adef5f17
+D system.ads		20141119215827 90249111
+D s-crtl.ads		20140225151544 840e6817
+D s-exctab.ads		20140225151139 54135002
+D s-ficobl.ads		20120709130952 55a71d43
+D s-finmas.ads		20140225151139 814daec4
+D s-finroo.ads		20120426095924 4ff27390
+D s-parame.ads		20140225151139 ab8cb46a
+D s-pooglo.ads		20110804083314 542f33d0
+D s-soflin.ads		20140225151139 aa763b52
+D s-stache.ads		20140225151139 a37c21ec
+D s-stalib.ads		20140225151139 a891183f
+D s-stoele.ads		20140225151139 2dc34a04
+D s-stoele.adb		20140225151139 ed88f8fb
+D s-stopoo.ads		20131010103753 b16154c2
+D s-traent.ads		20140225151139 b5116092
+D s-unstyp.ads		20140225151139 510692af
+D s-wchcon.ads		20140225151139 1b7d22d2
+X 1 ada.ads
+16K9*Ada 19e8 15|1r6 1r23 2r6 7r27
+X 7 a-textio.ads
+49K13*Text_IO 471e16 15|1w10 1r27
+X 9 a-uncdea.ads
+20u15*Unchecked_Deallocation 15|2w10 7r31
+X 10 arbre.ads
+6K9*Arbre 76e10 14|8w6 8r17 15|3w6 3r17
+8P10*P_arb 14|23r57 38r72 41r53 47r58 56r17 15|20r57 44r72 61r53 75r58
+25V14*Get_frequence{integer} 15|51s16 51s50
+34V14*Sommer_arbre{8P10} 15|77s16
+X 11 chaine.ads
+3K9*Chaine 65e11 14|9w6 9r18
+X 14 liste_arbre.ads
+11K9*Liste_arbre 52E10 60l5 60e16 15|5b14 82l5 82t16
+13P10*T_list_arb 16r50 20r41 23r38 28r49 32r49 38r48 41r34 44r39 47r39 53c10
+. 57r19 15|7r66 9r50 15r41 20r38 28r48 33r49 44r48 45r21 46r20 61r34 66r39
+. 75r39
+16U15*Initialiser_list_arb 16<38 15|9b15 12l9 12t29
+16p38 liste{13P10} 17r36 15|9b38 11m9
+20V14*Est_nul_liste{boolean} 17s21 20>30 24s24 33s21 48s24 15|15b14 18l9
+. 18t22 48s12
+20p30 liste{13P10} 15|15b30 17r16
+23V14*Get_prem_arb{10|8P10} 23>27 15|20b14 23l9 23t21
+23p27 liste{13P10} 24r38 15|20b27 22r16
+28U15*Detruire_prem_arb 28=34 15|28b15 31l9 31t26
+28p34 liste{13P10} 15|28b33 30m9 30r18
+32U15*Detruire_list_arb 32=34 15|33b15 36s13 42l9 42t26
+32p34 liste{13P10} 33r36 15|33b34 35r12 36r33 37m19
+38U15*Placer_croissant 38=33 38>61 15|44b15 57s13 59l9 59t25
+38p33 liste{13P10} 15|44b33 48r26 49m13 51r30 53r26 55m13 57r31
+38p61 arbre{10|8P10} 15|44b61 49r36 51r64 54r39 57r49
+41V14*Get_arb{10|8P10} 41>23 15|61b14 64l9 64t16
+41p23 liste{13P10} 15|61b23 63r20
+44V14*Taille_liste{integer} 44>28 15|66b14 71s24 73l9 73t21
+44p28 liste{13P10} 15|66b28 68r12 71r37
+47V14*Somme_premier{10|8P10} 47>28 15|75b14 79l9 79t22
+47p28 liste{13P10} 48r38 15|75b28 77r29 77r45
+52R10 List_arb 53r31 55c10 58e15 15|7r56 49r26 54r29
+56p9*Arbre{10|8P10} 15|22r26 51r40 63r30 77r39 77r67
+57p9*Suivant{13P10} 15|30r28 36m43 57m41 71r47 77r55
+X 15 liste_arbre.adb
+7U15 Free[9|20] 37s13
+45p9 list_suiv{14|13P10} 53m13 54r46
+46p9 New_list{14|13P10} 54m13 55r22
+

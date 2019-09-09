@@ -1,0 +1,112 @@
+V "GNAT Lib v4.9"
+A -O2
+A -g
+A -gnatA
+P ZX
+
+RN
+RV NO_ALLOCATORS
+RV NO_DIRECT_BOOLEAN_OPERATORS
+RV NO_IO
+RV NO_IMPLICIT_CONDITIONALS
+RV NO_LOCAL_ALLOCATORS
+RV NO_RECURSION
+RV NO_STANDARD_STORAGE_POOLS
+RV NO_UNCHECKED_DEALLOCATION
+RV NO_IMPLEMENTATION_PRAGMAS
+RV SPARK_05
+
+U chaine%b		chaine.adb		0c201ec0 NE OO PK
+W ada%s			ada.ads			ada.ali
+W ada.io_exceptions%s	a-ioexce.ads		a-ioexce.ali
+W ada.tags%s		a-tags.adb		a-tags.ali
+W ada.text_io%s		a-textio.adb		a-textio.ali
+W ada.unchecked_deallocation%s
+
+U chaine%s		chaine.ads		84608299 EE NE OO PK
+
+D ada.ads		20070406091342 3ffc8e18
+D a-except.ads		20140129161953 f86a4103
+D a-finali.ads		20111121113555 52ecdc1b
+D a-ioexce.ads		20140225151544 e4a01f64
+D a-stream.ads		20140122164720 1a984740
+D a-tags.ads		20111212115430 6c0509d0
+D a-textio.ads		20140129155348 386df5d4
+D a-unccon.ads		20070406091342 f9eb8f06
+D a-uncdea.ads		20070406091342 f15a5ed1
+D chaine.ads		20181217194437 84608299
+D chaine.adb		20181217194326 a5d72838
+D interfac.ads		20140225151838 69adb1b9
+D i-cstrea.ads		20130412125801 8128536b
+D system.ads		20141119215827 90249111
+D s-crtl.ads		20140225151544 840e6817
+D s-exctab.ads		20140225151139 54135002
+D s-ficobl.ads		20120709130952 55a71d43
+D s-finmas.ads		20140225151139 814daec4
+D s-finroo.ads		20120426095924 4ff27390
+D s-parame.ads		20140225151139 ab8cb46a
+D s-pooglo.ads		20110804083314 542f33d0
+D s-soflin.ads		20140225151139 aa763b52
+D s-stache.ads		20140225151139 a37c21ec
+D s-stalib.ads		20140225151139 a891183f
+D s-stoele.ads		20140225151139 2dc34a04
+D s-stoele.adb		20140225151139 ed88f8fb
+D s-stopoo.ads		20131010103753 b16154c2
+D s-traent.ads		20140225151139 b5116092
+D s-unstyp.ads		20140225151139 510692af
+D s-wchcon.ads		20140225151139 1b7d22d2
+X 1 ada.ads
+16K9*Ada 19e8 11|1r6 2r6 2r23 3r6 8r27
+X 4 a-ioexce.ads
+18K13*IO_Exceptions 30e22 11|1w10
+X 7 a-textio.ads
+49K13*Text_IO 471e16 11|2w10 2r27
+208U14*Put 11|88s9
+X 9 a-uncdea.ads
+20u15*Unchecked_Deallocation 11|3w10 8r31
+X 10 chaine.ads
+3K9*Chaine 57E10 65l5 65e11 11|5b14 128l9 128t15
+6P10*P_string 10r48 14r39 17r46 20r49 23r53 27r42 32r49 35r41 40r40 44r43
+. 48r32 48r49 51r43 51r66 58c10 61r19 11|8r66 10r48 15r39 20r46 29r49 38r53
+. 45r42 52r49 62r41 71r41 86r43 96r32 96r49 105r42 105r65
+7M10*t_bit 40r57 11|71r58 73r19
+10U15*Initialiser_chaine 10<35 11|10b15 13l9 13t27
+10p35 chaine{6P10} 11r33 11|10b35 12m9
+14V14*Vide_chaine{boolean} 11s21 14>27 24s24 28s24 41s24 45s24 11|15b14 18l9
+. 18t20 22s12 31s12 40s17 89s16 110s15 110s40
+14p27 chaine{6P10} 11|15b27 17r17
+17U15*Ajout_caract 17=30 17>56 11|20b15 25s13 27l9 27t21
+17p30 chaine{6P10} 11|20b30 22r24 23m13 25r26
+17e56 caractere{character} 11|20b56 23r37 25r45
+20U15*Supprimer_caract 20=33 11|29b15 34s13 36l9 36t25
+20p33 chaine{6P10} 11|29b33 31r24 32m13 34r30
+23U15*Supprimer_prem_carac 23=37 11|38b15 43l9 43t29
+23p37 chaine{6P10} 24r36 11|38b37 40r29 41m13 41r23
+27V14*Get_prem_caract{character} 27>30 11|45b14 48l9 48t24 75s17 88s13 113s22
+. 114s22
+27p30 chaine{6P10} 28r36 11|45b30 47r16
+32U15*Supprimer_chaine 32=33 11|52b15 55s13 60l9 60t25
+32p33 chaine{6P10} 11|52b33 54r12 55r31 56m19
+35V14*Taille_liste{integer} 35>29 36r26 11|62b14 67s24 69l9 69t21 108s12
+. 108s37
+35p29 chaine{6P10} 11|62b29 64r12 67r37
+40V14*Recup_binaire{7M10} 40>28 11|71b14 84l9 84t22
+40p28 chaine{6P10} 41r36 11|71b28 75r33
+44U15*Afficher_chaine 44>31 11|86b15 90s13 94l9 94t24
+44p31 chaine{6P10} 45r36 11|86b31 88r29 89r28 90r29
+48V14*Copy{6P10} 48>20 11|96b14 101s56 103l9 103t13
+48p20 chaine{6P10} 11|96b20 98r12 101r34 101r61
+51V14*Est_egal_string{boolean} 51>30 51>53 11|105b13 118s24 121l9 121t24
+51p30 string1{6P10} 11|105b29 108r25 110r27 113r38 118r40
+51p53 string2{6P10} 11|105b52 108r50 110r52 114r38 118r61
+57R10 T_string 58r29 59c10 62e15 11|8r56 23r27 101r24
+60e9*Caractere{character} 11|47r27 101r45
+61p9*Suivant{6P10} 11|25m37 31r35 34m41 41r34 55m42 67r48 89r39 90r40 101r72
+. 118r52 118r73
+X 11 chaine.adb
+8U15 Free[9|20] 56s13
+72e9 char{character} 75m9 76r12 78r15
+73m9 binaire{10|7M10} 77m13 79m13 83r16
+106e9 char1{character} 113m13 115r16
+106e16 char2{character} 114m13 115r25
+

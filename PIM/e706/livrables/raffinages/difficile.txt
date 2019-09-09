@@ -1,0 +1,14 @@
+Les parties semblant les plus compliqués à traiter sont :
+	- l'encodage/décodage de la description de l'arbre (car il est impossible de revennir d'un cran en arrière en parcourant l'arbre, et que si on revient au début, on refera une partie de chemin, faussant ainsi le résultat)
+	- La conversion de l'arbre en Table de Huffman :
+		Pour remédier à ce problème qu'est l'incapacité à revenir en arrière d'un cran (et le risque de refaire exactement le même chemin deux fois)
+		Nous avons eu l'idée de placer dans les enregistrements des noeuds un Booléen qui sera initialisé à False
+		Lorsque qu'on voudra construire la table, on parcourra l'arbre par le chemin le plus à gauche (en concaténant un '0' si on a pris la voie de gauche et un '1' si on a pris celle de droite)
+		Une fois arrivé à une feuille (= noeud pointant deux Null), on inscrit son code dans la table, on modifie le Booléen à True, et on recommance l'opération récursivement
+		Ainsi, il suffira de dire au sous-programme de ne pas prendre les pointeurs pointant sur un noeud ayant un Booléen True
+		De ce fait, on pourra balayer l'arbre de gauche à droite (c'est-à-dire dans le même ordre que la description de l'arbre)
+
+-- KJR -- Avec un parcours infixe similaire à celui du TP pour l'affichage du contenu de toutes les cellules de l'arbre, on n'a pas besoin de marquer le passage. 
+
+
+	- L'affichage de l'arbre de Huffman tel que présenté Figure 9

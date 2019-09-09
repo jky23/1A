@@ -1,0 +1,139 @@
+V "GNAT Lib v4.9"
+A -O2
+A -g
+A -gnatA
+P SS ZX
+
+RN
+RV NO_ALLOCATORS
+RV NO_FINALIZATION
+RV NO_IO
+RV NO_LOCAL_ALLOCATORS
+RV NO_RECURSION
+RV NO_STANDARD_STORAGE_POOLS
+RV NO_IMPLEMENTATION_PRAGMAS
+RV SPARK_05
+
+U table_code%b		table_code.adb		3e1054db NE OO PK
+W ada%s			ada.ads			ada.ali
+W ada.command_line%s	a-comlin.adb		a-comlin.ali
+W ada.finalization%s	a-finali.adb		a-finali.ali
+W ada.io_exceptions%s	a-ioexce.ads		a-ioexce.ali
+W ada.strings%s		a-string.ads		a-string.ali
+W ada.strings.unbounded%s  a-strunb.adb		a-strunb.ali
+W ada.tags%s		a-tags.adb		a-tags.ali
+W ada.text_io%s		a-textio.adb		a-textio.ali
+W arbre%s		arbre.adb		arbre.ali
+W chaine%s		chaine.adb		chaine.ali
+
+U table_code%s		table_code.ads		1b139900 EE NE OO PK
+W arbre%s		arbre.adb		arbre.ali
+W chaine%s		chaine.adb		chaine.ali
+
+D ada.ads		20070406091342 3ffc8e18
+D a-charac.ads		20070912115821 2d3ec45b
+D a-chlat1.ads		20140225151544 66457d31
+D a-comlin.ads		20140225151544 ea62afbc
+D a-except.ads		20140129161953 f86a4103
+D a-finali.ads		20111121113555 52ecdc1b
+D a-ioexce.ads		20140225151544 e4a01f64
+D a-stream.ads		20140122164720 1a984740
+D a-string.ads		20070406091342 90ac6797
+D a-strmap.ads		20090409150019 9cb836fb
+D a-strunb.ads		20120426100351 3f91d4c5
+D a-tags.ads		20111212115430 6c0509d0
+D a-textio.ads		20140129155348 386df5d4
+D a-unccon.ads		20070406091342 f9eb8f06
+D arbre.ads		20181217165455 cf28e3d3
+D chaine.ads		20181217194437 84608299
+D interfac.ads		20140225151838 69adb1b9
+D i-cstrea.ads		20130412125801 8128536b
+D system.ads		20141119215827 90249111
+D s-atocou.ads		20131010110730 cd7c94ca
+D s-atocou.adb		20131010121735 62bad392
+D s-crtl.ads		20140225151544 840e6817
+D s-exctab.ads		20140225151139 54135002
+D s-ficobl.ads		20120709130952 55a71d43
+D s-finmas.ads		20140225151139 814daec4
+D s-finroo.ads		20120426095924 4ff27390
+D s-parame.ads		20140225151139 ab8cb46a
+D s-pooglo.ads		20110804083314 542f33d0
+D s-secsta.ads		20140225151139 86a2856d
+D s-soflin.ads		20140225151139 aa763b52
+D s-stache.ads		20140225151139 a37c21ec
+D s-stalib.ads		20140225151139 a891183f
+D s-stoele.ads		20140225151139 2dc34a04
+D s-stoele.adb		20140225151139 ed88f8fb
+D s-stopoo.ads		20131010103753 b16154c2
+D s-stposu.ads		20121005142121 ffeba1c5
+D s-stratt.ads		20131014135145 aedef97e
+D s-traent.ads		20140225151139 b5116092
+D s-unstyp.ads		20140225151139 510692af
+D s-wchcon.ads		20140225151139 1b7d22d2
+D table_code.ads	20181217184055 505bf84a
+D table_code.adb	20181217194700 7ed18009
+X 1 ada.ads
+16K9*Ada 19e8 42|1r6 2r6 2r23 3r6 3r33 4r6 4r28 7r6 7r28
+X 4 a-comlin.ads
+38K13*Command_Line 139e21 42|4w10 4r32
+X 6 a-finali.ads
+40K13*Finalization 73e21 42|7w10 7r32
+X 7 a-ioexce.ads
+18K13*IO_Exceptions 30e22 42|1w10
+X 9 a-string.ads
+16K13*Strings 35e16 42|3r10 3r37
+X 11 a-strunb.ads
+76K21*Unbounded 489e26 42|3w18 3r45
+X 13 a-textio.ads
+49K13*Text_IO 471e16 42|2w10 2r27
+166U14*New_Line 42|72s13
+208U14*Put 42|69s13
+242U14*Put 42|68s13 70s13
+X 15 arbre.ads
+6K9*Arbre 76e10 41|2w6 2r17 42|6w6 6r17
+8P10*P_arb 41|35r66 42|77r63
+15V14*Arbre_vide{boolean} 42|79s12
+22V14*Get_caractere{character} 42|80s36
+28V14*Get_gauche{8P10} 42|79s23 83s32
+31V14*Get_droit{8P10} 42|86s32
+X 16 chaine.ads
+3K9*Chaine 65e11 41|1w6 1r18 42|5w6 5r18
+6P10*P_string 41|16r97 21r66 24r68 28r91 35r88 45r24 42|25r93 34r62 45r64
+. 54r87 77r85
+17U15*Ajout_caract 42|82s13 85s13
+20U15*Supprimer_caract 42|84s13 87s13
+44U15*Afficher_chaine 42|71s13
+48V14*Copy{6P10} 42|80s57
+51V14*Est_egal_string{boolean} 42|38s15 47s12
+X 41 table_code.ads
+4K9*Table_Code 39E14 49l5 49e15 42|9b14 94l5 94t15
+6P14*P_Code 9r50 13r37 16r51 21r47 24r49 28r49 31r40 35r47 41c14 46r27 42|11r45
+. 16r33 25r47 34r43 45r45 54r45 63r36 77r43
+9U19*Initialiser_Table 9<38 42|11b15 14l9 14t26
+9p38 Table{6P14} 10r32 42|11b34 13m9
+13V18*Taille{integer} 10s25 13>26 17s25 17s45 42|16b14 21s20 23l9 23t15
+13p26 Table{6P14} 42|16b22 18r12 21r27
+16U19*Ajouter_Element 16=36 16>60 16>87 42|25b15 30s13 32l9 32t24 80s13
+16p36 Table{6P14} 17r32 17r52 42|25b32 27r12 28m12 30r30
+16e60 Caractere{character} 42|25b56 28r33 30r50
+16p87 Code{16|6P10} 42|25b83 28r44 30r62
+21V18*Est_Present_Code{boolean} 21>36 21>56 42|34b14 41s20 43l9 43t25
+21p36 Table{6P14} 42|34b32 36r12 38r31 41r38
+21p56 Code{16|6P10} 42|34b52 38r47 41r58
+24V18*Caractere_Par_Code{character} 24>38 24>58 42|45b14 50s20 52l9 52t27
+24p38 Table{6P14} 42|45b34 47r28 48r20 50r40
+24p58 Code{16|6P10} 42|45b54 47r43 50r60
+28V18*Code_Par_Caractere{16|6P10} 28>38 28>58 42|54b14 59s20 61l9 61t27
+28p38 Table{6P14} 42|54b34 56r12 57r20 59r40
+28e58 Caractere{character} 42|54b54 56r34 59r60
+31U19*Afficher 31>29 42|63b15 73s13 75l9 75t17
+31p29 Table{6P14} 42|63b25 65r12 69r17 71r29 73r22
+35U19*Creer_Table 35=32 35>55 35=74 42|77b15 83s13 86s13 89l9 89t20
+35p32 Table{6P14} 42|77b28 80m30 83m26 86m26
+35p55 Arbre{15|8P10} 42|77b52 79r34 80r50 83r43 86r42
+35p74 Code{16|6P10} 42|77b71 80r62 82m27 83m50 84m30 85m27 86m49 87m30
+39R14 T_Code 41r31 43c14 47e19 42|28r25
+44e17*Caractere{character} 42|48r30 56r22 69r27
+45p17*Code{16|6P10} 42|38r41 47r38 57r30 71r39
+46p17*Suivant{6P14} 42|21r37 30m40 41r48 50r50 59r50 73r32
+

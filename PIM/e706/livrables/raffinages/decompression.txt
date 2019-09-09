@@ -1,0 +1,31 @@
+
+--kjr-- idem, il faut raffiner plus les grandes étapes pour mieux comprendre les algos que vous allez realiser
+-- aussi, il manque les flux de données
+
+R0 : Raffinage de la décompression par le codage de Huffman
+
+R1 : Raffinage de R0
+	 - Construire l'arbre de Huffman
+	 - Construire la table de Huffman
+	 - Générer le fichier décompressé
+	 
+R2 : Construire l'arbre de Huffman
+	 - A partir de la liste des caractères ordonnée correctement et de la description de l'arbre,
+	 former l'arbre de gauche à droite
+	 (- l'arbre ainsi formé n'aura pas de fréquence, on pourra se contenter de toutes les fixer à 0 pour pouvoir réutiliser le type T_noeud de la compression)
+	 
+R2  : Construire la table de Huffman
+	 - A partir de l'arbre de Huffman, former la table de Huffman comme lors de la compression
+	 - A partir de l'octet de taille de l'arbre, vérifier que la table contient le bon nombre de caractères
+	 
+R2 : Générer le fichier décompressé
+	 - Reconstruire le fichier texte en remplaçant chaque code par son caractère correspondant dans la table de Huffman
+	 (- Cette étape se base sur la non-ambiguïté de la table de Huffman)
+
+R3 : Reconstruire l'arbre à partir de la liste des caractères et de la description
+
+R3 : Former la table de Huffman à partir de l'arbre
+
+R3 : Verifier que la table contient le bon nombre de caracteres
+
+R3 : Reconstruire le fichier texte

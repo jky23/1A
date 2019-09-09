@@ -1,0 +1,201 @@
+V "GNAT Lib v4.9"
+M P W=b
+A -O2
+A -g
+A -gnatA
+P SS ZX
+
+RN
+RV NO_EXCEPTION_HANDLERS
+RV NO_EXCEPTIONS
+RV NO_IO
+RV NO_SECONDARY_STACK
+RV NO_STANDARD_STORAGE_POOLS
+RV NO_UNCHECKED_ACCESS
+RV NO_DEFAULT_INITIALIZATION
+RV NO_IMPLEMENTATION_ATTRIBUTES
+RV NO_IMPLEMENTATION_PRAGMAS
+RV SPARK_05
+
+U compress%b		compress.adb		8c15e8cf NE OO SU IL
+W ada%s			ada.ads			ada.ali
+W ada.command_line%s	a-comlin.adb		a-comlin.ali
+W ada.exceptions%s	a-except.adb		a-except.ali
+W ada.integer_text_io%s	a-inteio.ads		a-inteio.ali
+W ada.io_exceptions%s	a-ioexce.ads		a-ioexce.ali
+W ada.sequential_io%s
+W ada.tags%s		a-tags.adb		a-tags.ali
+W ada.text_io%s		a-textio.adb		a-textio.ali
+Z ada.text_io.modular_aux%s  a-timoau.adb	a-timoau.ali
+W ada.text_io.modular_io%s
+Z ada.unchecked_conversion%s
+W arbre%s		arbre.adb		arbre.ali
+W chaine%s		chaine.adb		chaine.ali
+Z interfaces%s		interfac.ads		interfac.ali
+Z interfaces.c_streams%s  i-cstrea.adb		i-cstrea.ali
+W liste_arbre%s		liste_arbre.adb		liste_arbre.ali
+Z system%s		system.ads		system.ali
+Z system.byte_swapping%s  s-bytswa.ads		s-bytswa.ali
+Z system.crtl%s		s-crtl.ads		s-crtl.ali
+Z system.file_control_block%s  s-ficobl.ads	s-ficobl.ali
+Z system.file_io%s	s-fileio.adb		s-fileio.ali
+W system.secondary_stack%s  s-secsta.adb	s-secsta.ali
+Z system.sequential_io%s  s-sequio.adb		s-sequio.ali
+Z system.storage_elements%s  s-stoele.adb	s-stoele.ali
+W system.unsigned_types%s  s-unstyp.ads		s-unstyp.ali
+W tab_freq%s		tab_freq.adb		tab_freq.ali
+W table_code%s		table_code.adb		table_code.ali
+
+D ada.ads		20070406091342 3ffc8e18
+D a-comlin.ads		20140225151544 ea62afbc
+D a-except.ads		20140129161953 f86a4103
+D a-finali.ads		20111121113555 52ecdc1b
+D a-inteio.ads		20070406091342 f64b89a4
+D a-ioexce.ads		20140225151544 e4a01f64
+D a-sequio.ads		20090409150019 7b5d9d38
+D a-sequio.adb		20140219144026 ed424daa
+D a-stream.ads		20140122164720 1a984740
+D a-tags.ads		20111212115430 6c0509d0
+D a-textio.ads		20140129155348 386df5d4
+D a-tiinio.ads		20090409150019 aa04e5d6
+D a-timoau.ads		20090409150019 01c06610
+D a-timoio.ads		20090409150019 d32407b9
+D a-timoio.adb		20090409150019 de0ea1c6
+D a-unccon.ads		20070406091342 f9eb8f06
+D arbre.ads		20181217165455 cf28e3d3
+D chaine.ads		20181217194437 84608299
+D compress.adb		20181218112906 0a1e4905
+D interfac.ads		20140225151838 69adb1b9
+D i-cstrea.ads		20130412125801 8128536b
+D liste_arbre.ads	20181217090645 03913358
+D system.ads		20141119215827 90249111
+D s-bytswa.ads		20120712104318 799c7440
+D s-crtl.ads		20140225151544 840e6817
+D s-exctab.ads		20140225151139 54135002
+D s-ficobl.ads		20120709130952 55a71d43
+D s-fileio.ads		20120709130952 45ce2f0f
+D s-finmas.ads		20140225151139 814daec4
+D s-finroo.ads		20120426095924 4ff27390
+D s-parame.ads		20140225151139 ab8cb46a
+D s-pooglo.ads		20110804083314 542f33d0
+D s-secsta.ads		20140225151139 86a2856d
+D s-sequio.ads		20090409150019 fc7560a7
+D s-soflin.ads		20140225151139 aa763b52
+D s-stache.ads		20140225151139 a37c21ec
+D s-stalib.ads		20140225151139 a891183f
+D s-stoele.ads		20140225151139 2dc34a04
+D s-stoele.adb		20140225151139 ed88f8fb
+D s-stopoo.ads		20131010103753 b16154c2
+D s-traent.ads		20140225151139 b5116092
+D s-unstyp.ads		20140225151139 510692af
+D s-wchcon.ads		20140225151139 1b7d22d2
+D tab_freq.ads		20181203093808 25305a02
+D table_code.ads	20181217184055 505bf84a
+X 1 ada.ads
+16K9*Ada 19e8 19|6r6 7r6 7r23 8r6 8r31 9r6 9r28 10r6 16r27 21r26 35r13
+X 2 a-comlin.ads
+38K13*Command_Line 139e21 19|9w10 9r32
+41V13*Argument_Count{natural} 19|43s8
+48V13*Argument{string} 19|44s30 162s25
+X 5 a-inteio.ads
+18K13*Integer_Text_IO[12|45] 19|8w10 8r35
+X 6 a-ioexce.ads
+18K13*IO_Exceptions 30e22 19|6w10
+X 7 a-sequio.ads
+43k13*Sequential_IO 158e22 19|10w10 16r31
+53P9 File_Type<34|63P9> 19|34r19[16]
+55E9 File_Mode
+55n32 Out_File{55E9[19|16]} 19|89r18[16]
+55n42 Append_File{55E9[19|16]} 19|107r16[16] 123r15[16] 147r16[16] 163r16[16]
+70U14 Create 19|89s5[16]
+76U14 Open 19|107s5[16] 123s5[16] 147s5[16] 163s5[16]
+82U14 Close 19|101s5[16] 118s5[16] 138s5[16] 156s5[16] 183s5[16]
+98U14 Write 19|99s16[16] 115s16[16] 135s20[16] 153s16[16] 177s24[16]
+X 11 a-textio.ads
+49K13*Text_IO 471e16 19|7w10 7r27 21r30 35r17
+52P9*File_Type 19|35r25
+53n23*In_File{53E9} 19|44r21 162r17
+92U14*Open 19|44s9 162s5
+98U14*Close 19|57s9 184s5
+168U14*Skip_Line 19|49s21 169s17
+171V13*End_Of_Line{boolean} 19|47s21 167s16
+183V13*End_Of_File{boolean} 19|46s20 55s23 166s16 181s19
+205U14*Get 19|51s21 171s17
+X 14 a-timoio.ads
+45k21*Modular_IO 84e27 19|21r38
+X 17 arbre.ads
+6K9*Arbre 76e10 19|1w6 1r16
+8P10*P_arb 19|30r34
+19V14*Creer_noeud{8P10} 19|67s41
+47U15*Afficher_arbre 19|187s5
+51U15*Descrip_arbre 19|146s5
+54U15*Get_list_caract 19|122s5
+X 18 chaine.ads
+3K9*Chaine 65e11 19|3w6 3r18
+6P10*P_string 19|31r40
+7M10*t_bit 19|16r45 21r49 33r15
+10U15*Initialiser_chaine 19|83s5 121s5 145s5
+14V14*Vide_chaine{boolean} 19|125s15 150s15 174s23
+23U15*Supprimer_prem_carac 19|127s9 152s9 176s17
+27V14*Get_prem_caract{character} 19|126s33
+40V14*Recup_binaire{7M10} 19|151s20 175s28
+X 19 compress.adb
+12U11*compress 12b11 191l5 191t13
+16K13 Bin_IO[7|43] 17r9 34r12 99r9 115r9 135r13 153r9 177r17
+21K13 ES_IO[14|45] 22r9
+26p5 Tab_frequence{44|3P14} 39m21 39r21 53m35 53r35 64r24 65r37 66r67 67r76
+27p5 Tab_code{45|6P14} 84m23 84r23 85m17 85r17 106r28 173r40 188r14
+28p5 listes_arbres{22|13P10} 63m26 63r26 67m26 67r26 73r24 74r38 75m27 75r27
+. 76m27 76r27 77m26 77r26 79r30
+29e5 ieme_char{character} 65m9 66r81 67r90 67r101
+29e16 un_char{character} 48m21 51m31 53r50 168m17 171m27 173r49
+30p5 arbre_somme{17|8P10} 74m9 77r41
+30p18 arbre_huffman{17|8P10} 79m5 85r27 122r21 146r19 187r20
+31p5 code{18|6P10} 83m24 83r24 85m42 85r42 173m13 174r35 175r42 176m38 176r38
+31p11 liste_char{18|6P10} 121m24 121r24 122m35 122r35 125r27 126r49 127m30
+. 127r30
+31p23 descript_arbre{18|6P10} 145m24 145r24 146m34 146r34 150r27 151r34 152m30
+. 152r30
+32i5 taille_arbre{integer} 106m5 109r12 111m13 111r29 146m49 146r49
+32i19 taille_fichier{integer} 40m5 66m9 66r27 93r12 95m13 95r31
+32i35 ASCII{integer} 126m9 129r16 131m17 131r26
+32i42 compteur{integer} 186m5 187m35 187r35
+33m5 binaire{18|7M10} 94m13 97m13 99r27 110m13 113m13 115r28 130m17 133m17
+. 135r32 151m9 153r27 175m17 177r35
+34p5 file{7|53P9[16]} 89m12 89r12 99r22 101m11 101r11 107m10 107r10 115r22
+. 118m11 118r11 123m10 123r10 135r26 138m11 138r11 147m10 147r10 153r22 156m11
+. 156r11 163m10 163r10 177r30 183m11 183r11
+35p5 texte{11|52P9} 44m14 44r14 46r32 47r33 49r31 51r25 55r35 57m15 57r15
+. 162m10 162r10 166r28 167r28 169r27 171r21 181r31 184m11 184r11
+64i9 i{integer} 65r52
+92i9 i{integer} 93r33 95r51
+108i9 i{integer} 109r31 111r47
+128i13 i{integer} 129r28 131r37
+X 22 liste_arbre.ads
+11K9*Liste_arbre 19|2w6 2r23 22|60e16
+13P10*T_list_arb 19|28r21
+16U15*Initialiser_list_arb 19|63s5
+28U15*Detruire_prem_arb 19|75s9 76s9
+38U15*Placer_croissant 19|67s9 77s9
+41V14*Get_arb{17|8P10} 19|79s22
+44V14*Taille_liste{integer} 19|73s11
+47V14*Somme_premier{17|8P10} 19|74s24
+X 34 s-sequio.ads
+63P9*File_Type(43R9)
+X 44 tab_freq.ads
+1K9*Tab_Freq 19|4w6 4r20 44|39e13
+3P14*P_Tab_Freq 19|26r21
+6U19*Initialiser_Tab 19|39s5
+10V18*Taille{integer} 19|64s17
+15U19*Ajouter_Caractere 19|53s17
+20V18*Ieme_Caractere{character} 19|65s22
+25V18*Frequence_Du_Caractere{integer} 19|66s44 67s53
+X 45 table_code.ads
+4K9*Table_Code 19|5w6 5r22 45|49e15
+6P14*P_Code 19|27r16
+9U19*Initialiser_Table 19|84s5
+13V18*Taille{integer} 19|106s21
+28V18*Code_Par_Caractere{18|6P10} 19|173s21
+31U19*Afficher 19|188s5
+35U19*Creer_Table 19|85s5
+
