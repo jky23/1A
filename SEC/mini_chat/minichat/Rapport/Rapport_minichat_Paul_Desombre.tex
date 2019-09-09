@@ -1,0 +1,165 @@
+\documentclass[12pt]{report}
+
+% packages
+\usepackage[latin1]{inputenc}
+\usepackage{fancyhdr}
+\usepackage{a4wide}
+\usepackage[frenchb]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath,amssymb,amsthm,bbm} % math, mathbb, mathbbm
+\usepackage{url} %% pour citer les url par \url
+\usepackage{makeidx} %% index
+\usepackage{multirow} %% pour regrouper un texte sur plusieurs lignes dans une 
+\usepackage{color}
+\usepackage[final]{pdfpages} 
+\usepackage{epstopdf}
+\usepackage{tikz,pgfplots,pgf}
+\usepackage[toc,page]{appendix}
+\usepackage{listings}
+\usepackage{glossaries}
+\usepackage{algorithm}
+\usepackage{algorithmicx}
+\usepackage{algpseudocode}
+\usepackage[top=3.5cm]{geometry}
+\usepackage{time}
+
+\renewcommand{\appendixtocname}{Annexes} 
+\renewcommand{\appendixpagename}{Annexes} 
+\renewcommand{\contentsname}{Sommaire}
+\renewcommand{\appendixtocname}{Annexes} 
+\renewcommand{\appendixpagename}{Annexes} 
+
+\setlength{\parindent}{0cm}
+\setlength{\parskip}{1ex plus 0.5ex minus 0.2ex}
+\newcommand{\hsp}{\hspace{20pt}}
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
+
+\begin{document}
+
+\begin{titlepage}
+  \begin{sffamily}
+  \begin{center}
+
+    % Upper part of the page. The '~' is needed because \\
+    % only works if a paragraph has started.
+    \includegraphics[scale=2]{inp-enseeiht.png}~\\[1.5cm]
+
+    %\textsc{\LARGE ENSEEIHT}\\[2cm]
+
+    \textsc{\Large Projet système d'exploitation}\\[1.5cm]
+
+    % Title
+    \HRule \\[0.4cm]
+    { \huge \bfseries Minishell\\[0.4cm] }
+
+    \HRule \\[2cm]
+    \includegraphics[scale=0.2]{serveur_console.png}
+    \\[2cm]
+
+    % Author and supervisor
+    \begin{minipage}{0.4\textwidth}
+      \begin{flushleft} \large
+        \emph{\'Etudiant :} Paul Desombre\\
+      \end{flushleft}
+    \end{minipage}
+    \begin{minipage}{0.4\textwidth}
+      \begin{flushright} \large
+        \emph{Tuteurs :} Jérôme Ermont\\
+      \end{flushright}
+    \end{minipage}
+
+    \vfill
+
+    % Bottom of the page
+    {\large Systèmes d'exploitation centralisés - SN - 1A}
+
+  \end{center}
+  \end{sffamily}
+\end{titlepage}
+
+\setcounter{tocdepth}{2}
+\tableofcontents
+
+\chapter*{Introduction}
+Dans le cadre du cours \emph{Systèmes d'exploitation centralisés}, réaliser un minichat, basé sur une application de chat classique.
+
+Ce rapport présente mon minichat, avec mes choix de conceptions ainsi que des tests réalisés.
+
+\chapter{Application}
+
+\section{Architecture}
+
+\subsection{Console/Serveur}
+Ce minichat est basé sur le type serveur/console, c'est-à-dire qu'il y a un processus serveur qui fait le lien entre tous les processus console à travers des tubes nommés.
+
+Donc tout d'abord le serveur est lancé, il créé le tube écoute via lequel toute les connexions se fera. Ensuite les consoles se lancent et se connectent au serveur, elles créés des tubes nommés serveur à console (S2C) et console à serveur (C2S) qui vont servir à envoyer et recevoir des messages.
+
+\subsection{Chatmmap}
+Ce minichat n'est basé sur aucune architecture classique : chaque processus sert de serveur et de console à la fois. 
+
+L'utilisateur se connecte via un couplage de mémoire à travers un mot clé (nom du serveur). Pour que d'autres utilisateurs rejoignent la même conversation, il leur suffit d'utiliser le même nom de serveur.
+
+Le problème avec cette architecture c'est que le chat n'est pas actualisé à chaque message envoyé.
+
+\section{Conception}
+
+\subsection{Console/Serveur}
+J'ai tout d'abord commencé par écrire le code du serveur, sans lequel rien n'est possible. Ensuite j'ai écrit le code des consoles qui se connectent au serveur.
+
+Les détails sont dans les commentaires du code.
+
+\subsection{Chatmmap}
+Les détails sont dans les commentaires du code.
+
+\chapter{Tests}
+
+\section{Méthodologie}
+
+\subsection{Console/Serveur}
+Pour tester l'application console/serveur, j'ai connecté plusieurs utilisateurs à un même serveur en même temps. Ensuite j'essayais d'envoyer des messages, de déconnecter la machine serveur et les machines console via signaux SIGKILL et SIGINT.
+
+Des résultats de tests sont disponibles en figure \ref{tests_serveur_console}.
+
+\subsection{Chatmmap}
+Idem.
+
+Des résultats de tests sont disponibles en figure \ref{tests_chatmmap}.
+
+\section{Exemples}
+
+\subsection{Console/Serveur}
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.3]{serveur_console.png}
+\caption{Exemple de fonctionnement du minichat console/serveur à trois utilisateurs}
+\label{tests_serveur_console}
+\end{figure}
+
+\subsection{Chatmmap}
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.3]{chatmmap.png}
+\caption{Exemple de fonctionnement du minichat chatmmap à quatre utilisateurs}
+\label{tests_chatmmap}
+\end{figure}
+
+\section{Difficultés}
+\begin{itemize}
+\item Appel de ISSET() bloquant (console/serveur);
+\item Dire "au revoir" fait planter le serveur (console/serveur);
+\item Actualisation non automatique du chatmmap;
+\item Problème d'affichage des pseudo sur le chatmmap.
+\end{itemize}
+
+\section{Solutions}
+\begin{itemize}
+\item Changer les indices de tableaux;
+\item Aucune solution pour la suite.
+\end{itemize}
+
+\chapter*{Conclusion}
+Pour conclure sur ce projet, je l'ai trouvé intéressant et moins difficile que le minishell.
+
+\end{document}

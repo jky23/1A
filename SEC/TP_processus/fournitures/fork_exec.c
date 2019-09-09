@@ -1,0 +1,17 @@
+#include  <stdio.h>  /* printf  */
+#include  <unistd.h> /* fork */
+#include  <stdlib.h>  /*  EXIT_SUCCESS  */
+
+int  main () {
+	int d1 = fork ();  printf("fork 1 : processus %d, de père %d\n", getpid(), getppid());
+	if (d1 == 0) {
+		int d2 = fork ();  printf ("fork 2 : processus %d, de père %d\n", getpid(), getppid());
+		if (d2 == 0)  {
+			fork ();  printf ("fork 3 : processus %d, de père %d\n", getpid(), getppid());
+		}
+	}
+	
+	//fork ();  printf ("fork 3 : processus %d, de père %d\n", getpid(), getppid());
+	sleep(180);
+	return  EXIT_SUCCESS;
+}

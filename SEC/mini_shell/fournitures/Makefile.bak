@@ -1,0 +1,25 @@
+CC = gcc
+CFLAGS = -Wall -O
+LDFLAGS = 
+SOURCES = mini_shell.c Processus.c
+OBJECTS = mini_shell.o Processus.o
+EXEC = mini_shell
+RM = rm
+
+#Regles
+
+all : $(EXEC)
+
+
+$(EXEC) : $(OBJECTS)
+			 $(CC) $(CFLAGS) $^ -o $@
+	
+$(OBJECTS) : depend
+		 
+clean :
+	   $(RM) *.o $(EXEC)
+	 
+depend :
+		makedepend *.c -Y.$(SOURCES)
+
+
