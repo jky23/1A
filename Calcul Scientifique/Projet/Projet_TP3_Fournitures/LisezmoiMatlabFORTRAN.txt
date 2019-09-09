@@ -1,0 +1,63 @@
+Ensemble des Fichiers pour pouvoir appeler la routine FORTRAN implémentant
+l'algorithme Subspace_1
+
+1) le fichier courant LisezmoiMatlabFORTRAN.txt
+
+fichiers FORTRAN
+----------------
+2) iter_v2.o, contient la code compilé de la routine fortran correspondant à la version
+   subspace_iter_v2
+3) tools.f90 déjà donné au TP2
+
+fichiers interfaçage FORTRAN - Matlab
+-------------------------------------
+4) mex_C_glnxa64.xml
+5) mex_FORTRAN_glnxa64.xml
+6) mex_subspace_iter_v2.c
+
+fichiers pour compiler
+----------------------
+7) Make.inc
+8) makefile
+
+fichiers matlab
+---------------
+9) fortran_subspace_iter_ev.m, la fonction Matlab à utiliser pour calculer les couples propres
+dominants
+10) exemple_matlabfortran.m, un exemple d'utilisation de cette fonction
+
+Utilisation (commandes à taper dans un terminal entre ----)
+===========
+0. création de la variable d'environnement LD_PRELOAD
+
+----
+export LD_PRELOAD=/usr/lib/x86_64-linux-gnu/libm.so:/usr/lib/x86_64-linux-gnu/libgomp.so.1
+----
+
+commande à mettre dans votre fichier ~/.bashrc
+pour que la variable soit définie à chaque lancement d'un nouveau SHELL
+
+1. Initialisation MEX (à faire une fois)
+
+----
+make matlabsetup
+----
+
+2. compilation
+
+----
+make
+----
+
+3. lancer matlab
+
+----
+matlab
+----
+
+4. un exemple d'appel à fortran_subspace_iter_ev est donné dans
+   exemple_matlabfortran.m
+   cet exemple calcule un certain nombre de couples propres d'une petite matrice
+   et affice la précision obtenue pour les différents couples.
+
+*) normalement vous n'avez aucun de ces fichiers à modifier
