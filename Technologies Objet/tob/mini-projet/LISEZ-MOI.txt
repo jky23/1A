@@ -1,0 +1,42 @@
+Nom       : Ky		
+Prénom    : Joël Roman 	
+Groupe TP : M
+
+
+Consigne :  Ci-dessous, répondre à la place des « ... ».
+
+
+=====[ Temps ]==================================================================
+
+Temps consacré au projet pour rendre la V1 : 4 heures 45 minutes
+Temps consacré au projet pour rendre la V2 : ... heures ... minutes
+(Pour la V2 on ne tiendra pas du temps passé sur la V1.)
+
+
+=====[ Questions ]==============================================================
+
+Indiquer la relation UML entre Cercle et le Point centre du cercle.
+-------------------------------------------------------------------
+
+La relation UMl entre Cercle et Point est une relation de composition car la classe Cercle utilise la Classe Point ainsi 
+que ses méthodes et la durée de vie de la classe Point est liée à celle de la classe Cercle.
+
+
+
+Comment est réalisée l'exigence E18 ?
+-------------------------------------
+
+Pour réaliser l'exigence E18, la methode getCentre qui renvoit le centre du cercle s'effectue en faisant une copie des coordonnées
+du centre sur une nouvelle poignée de sorte que l'on ne puisse pas modifier le centre du cercle par l'appel de getCentre.
+
+
+
+=====[ Explications ]===========================================================
+
+(Facultatif) Donner ici les explications supplémentaires utiles à la
+compréhension du travail rendu.
+
+Le projet rendu est assez compréhensible grâce à la javadoc.
+Cependant, l'utilisation du constructeur construisant un cercle à partir de deux points diamétralement opposés 
+et de sa couleur nécessiterait que l'utiliateur connaisse comment se nomme la couleur en Java.
+Les préconditions ont été aussi ajoutées  dans les commentaires de documentation pour être présents dans la javadoc.

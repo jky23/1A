@@ -1,0 +1,19 @@
+=====[ Relecture du code ]======================================================
+
+Remarque : n points de pénalité ==> n points perdus sur la note.
+
+Fichier LISEZ-MOI.txt :
+
+    explications pertinentes : Bonus : +1 pt.
+
+
+Forme (total = -5) :
+
+    * variable locale inutile		-0.5
+
+            		double r = pt1.distance(pt2) / 2;
+
+		 	double r = pt.distance(pt2);
+
+--------------------------------------------------------------------------------
+Total: 0,5 pt

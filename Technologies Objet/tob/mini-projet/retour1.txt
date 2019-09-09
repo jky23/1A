@@ -1,0 +1,22 @@
+
+# Remarques générales ################################################
+
+Tenir compte des remarques générales disponibles via Moodle
+et de l'évaluation automatique disponible sur votre SVN via svn update.
+
+Elles ne sont pas reprises ici !
+
+
+# LISEZ-MOI.txt ######################################################
+
+ - LISEZ-MOI.txt : ce n'est pas une relation d'agrégation !  Êtes-vous sûr que
+  le centre reste si le cercle est détruit ?  Qui a accès à ce point à part le
+  cercle lui-même ? Un dessin de l'état de la mémoire peut aider à répondre !
+
+
+# Remarques supplémentaires ##########################################
+
+ - Une petite note : utilise plutôt "this.rayon*this.rayon" que "Math.pow(this.rayon, 2)";
+ça fait la même chose, c'est un peu plus rapide et un peu plus lisible.
+ - Methods "perimetre" et "aire" manque de commentaires.
+ - sauter des lignes pour aérer le texte
