@@ -1,0 +1,17 @@
+Exercice 1
+
+Question 1- Les commentaires de spécification n'apparaissent que dans la spéciification du module Piles pour que le module soit utilisable et accessible à tous et que les modifications soient possibles
+
+Question 2- Les contrats sont formalisés dans la spécification et s'applique à l'implémentation
+
+Question 3- Un sous-programme spécifique au module Piles doit être défini dans l'implémentation parce qu'il ne sera utilisé que pour 
+
+Question 4- La surcharge c'est lorsque plusieus sous-programmes ont le même nom et sont distingués en fonction du type et du nombre de paramètres
+            Après compilation de la procedure Illustrer Surcharge on remarque que la procedure Afficher ne connaît que deux types de paramètres qui sont Entier ou T_Pile
+
+Question 5- La procédure Afficher Entier est un paramètre de généricité de la procedure Afficher du module Piles car il faut passer par Afficher_Element pour afficher element par élément et préciser le type d'éléments(caractères, entier..)
+
+Question 6- Pour gérer le fait que les deux instances du module Piles fournissent les mêmes noms on peut 
+            PC1 : PPC1.T_Pile
+            PC2 : PPC2.T_Pile
+            

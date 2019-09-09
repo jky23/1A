@@ -1,0 +1,14 @@
+Exercice 1
+1-1. Les fichiers .ads et .adb correspondent respectivement à l'interface et au corps d'un module.
+
+1.2. Les sous programmes Initialiser, Le_Jour,Le_Mois et La_Date du fichier .adb ont été définis dans l'interface du module .adb ou leurs spécifications ont été données
+
+1-3. Le sous-programme Afficher_Deux_Positions a sa sémantique donnée dans dates.adb parce qu'il correspond à une procédure locale utilisée pour écrire le sous-programme Afficher du module Dates et ne sera utilisée qu'à ce niveau.
+
+
+1-4. Un utilisateur du module Dates ne peut utiliser que les typesT_Mois;T_Date; les procédures Afficher et Initialiser et les fonctions Le_Mois; Le_Jour; L_année.
+
+1-6. Le type T_Mois ne peut pas être défini en mode privé parce qu'il est utilisé dans les procedures et fonctions du module Dates(modifications..)
+
+1-7. Le fait de modifier le type T_Date en type très privé entraîne que les affectations et les égalités ne seront plus possibles.
+C'est le cas dans le fichier exemple_dates_erreurs.adb ou les affectations des lignes 38 et l'égalité de la ligne 43  est refusée par le compilateur

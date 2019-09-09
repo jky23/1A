@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<Locations >
+  <Project>
+    <vfs_file>/home/jky/Annee_1/pim/tp/tp4/tp4.gpr</vfs_file>
+    <file_marker column=" 14" line=" 41" >
+      <vfs_file>/home/jky/Annee_1/pim/tp/tp4/exemple_dates_erreurs.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_file>/home/jky/Annee_1/pim/tp/tp4/stocks_materiel.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_file>/home/jky/Annee_1/pim/tp/tp4/stocks_materiel.ads</vfs_file>
+    </file_marker>
+    <file_marker current="true" column=" 1" line=" 1" >
+      <vfs_file>/home/jky/Annee_1/pim/tp/tp4/scenario_stock.adb</vfs_file>
+    </file_marker>
+  </Project>
+  <Project >
+    <file_marker column=" 1" line=" 1">
+      <vfs_file >/home/jky/Annee_1/pim/tp/tp4/exemple_dates_erreurs.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1">
+      <vfs_file >/home/jky/Annee_1/pim/tp/tp4/dates.ads</vfs_file>
+    </file_marker>
+    <file_marker current="true" column=" 1" line=" 1">
+      <vfs_file >/home/jky/Annee_1/pim/tp/tp4/exemple_dates_erreurs.adb</vfs_file>
+    </file_marker>
+  </Project>
+</Locations>

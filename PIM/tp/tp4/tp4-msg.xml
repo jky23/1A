@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<messages >
+  <project>
+    <vfs_file>/home/jky/Annee_1/pim/tp/tp4/tp4.gpr</vfs_file>
+    <category name="Builder results" >
+      <file>
+        <vfs_name>/home/jky/Annee_1/pim/tp/tp4/exemple_dates_erreurs.adb</vfs_name>
+        <message text="&quot;Afficher_Deux_Positions&quot; is undefined" weight="2" highlighting_style="Builder results/Builder results" column="5" line="19" class="GPS.KERNEL.MESSAGES.SIMPLE.SIMPLE_MESSAGE"  />
+        <message text="invalid prefix in selected component &quot;Une_Date&quot;" weight="2" highlighting_style="Builder results/Builder results" column="5" line="31" class="GPS.KERNEL.MESSAGES.SIMPLE.SIMPLE_MESSAGE"  />
+        <message text="invalid prefix in selected component &quot;Une_Date&quot;" weight="2" highlighting_style="Builder results/Builder results" column="5" line="32" class="GPS.KERNEL.MESSAGES.SIMPLE.SIMPLE_MESSAGE"  />
+        <message text="left hand of assignment must not be limited type" weight="2" highlighting_style="Builder results/Builder results" column="5" line="38" class="GPS.KERNEL.MESSAGES.SIMPLE.SIMPLE_MESSAGE"  />
+        <message text="there is no applicable operator &quot;=&quot; for private type &quot;T_Date&quot; defined at dates.ads:8" weight="2" highlighting_style="Builder results/Builder results" column="19" line="43" class="GPS.KERNEL.MESSAGES.SIMPLE.SIMPLE_MESSAGE" >
+          <message last="84" first="74" text="there is no applicable operator &quot;=&quot; for private type &quot;T_Date&quot; defined at dates.ads:8" column="1" line="8" class="GPS.KERNEL.MESSAGES.HYPERLINK.HYPERLINK_MESSAGE" >
+            <vfs_file>/home/jky/Annee_1/pim/tp/tp4/dates.ads</vfs_file>
+          </message>
+        </message>
+      </file>
+    </category>
+  </project>
+</messages>

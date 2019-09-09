@@ -1,0 +1,123 @@
+V "GNAT Lib v4.9"
+A -O2
+A -g
+A -gnatA
+P ZX
+
+RN
+RV NO_DIRECT_BOOLEAN_OPERATORS
+RV NO_EXCEPTIONS
+RV NO_IO
+RV NO_RECURSION
+RV NO_STANDARD_STORAGE_POOLS
+RV NO_UNCHECKED_DEALLOCATION
+RV NO_IMPLEMENTATION_PRAGMAS
+RV NO_ELABORATION_CODE
+RV SPARK_05
+
+U abr%b			abr.adb			8e8a0d35 NE OO PK IU
+W ada%s			ada.ads			ada.ali
+W ada.exceptions%s	a-except.adb		a-except.ali
+W ada.integer_text_io%s	a-inteio.ads		a-inteio.ali
+W ada.tags%s		a-tags.adb		a-tags.ali
+W ada.text_io%s		a-textio.adb		a-textio.ali
+W ada.unchecked_deallocation%s
+
+U abr%s			abr.ads			d7272107 EE OO PK IU
+W ada.tags%s		a-tags.adb		a-tags.ali
+W system%s		system.ads		system.ali
+W system.exception_table%s  s-exctab.adb	s-exctab.ali
+W system.standard_library%s  s-stalib.adb	s-stalib.ali
+
+D abr.ads		20181113125446 d7272107
+D abr.adb		20181115085231 66d10e93
+D ada.ads		20070406091342 3ffc8e18
+D a-except.ads		20140129161953 f86a4103
+D a-finali.ads		20111121113555 52ecdc1b
+D a-inteio.ads		20070406091342 f64b89a4
+D a-ioexce.ads		20140225151544 e4a01f64
+D a-stream.ads		20140122164720 1a984740
+D a-tags.ads		20111212115430 6c0509d0
+D a-textio.ads		20140129155348 386df5d4
+D a-tiinio.ads		20090409150019 aa04e5d6
+D a-unccon.ads		20070406091342 f9eb8f06
+D a-uncdea.ads		20070406091342 f15a5ed1
+D interfac.ads		20140225151838 69adb1b9
+D i-cstrea.ads		20130412125801 8128536b
+D system.ads		20141119215827 90249111
+D s-crtl.ads		20140225151544 840e6817
+D s-exctab.ads		20140225151139 54135002
+D s-ficobl.ads		20120709130952 55a71d43
+D s-finmas.ads		20140225151139 814daec4
+D s-finroo.ads		20120426095924 4ff27390
+D s-parame.ads		20140225151139 ab8cb46a
+D s-pooglo.ads		20110804083314 542f33d0
+D s-soflin.ads		20140225151139 aa763b52
+D s-stache.ads		20140225151139 a37c21ec
+D s-stalib.ads		20140225151139 a891183f
+D s-stoele.ads		20140225151139 2dc34a04
+D s-stoele.adb		20140225151139 ed88f8fb
+D s-stopoo.ads		20131010103753 b16154c2
+D s-traent.ads		20140225151139 b5116092
+D s-unstyp.ads		20140225151139 510692af
+D s-wchcon.ads		20140225151139 1b7d22d2
+X 1 abr.ads
+1K9*ABR 70E14 83l5 83e8 2|5b14 159l5 159t8
+3P14*T_ABR 9r40 14r34 18r35 25r41 32r42 38r43 44r38 49r39 54r38 66r44 71c14
+. 76r45 77r44 2|8r76 11r36 18r30 25r31 41r37 64r38 88r34 110r39 111r36 111r50
+. 140r35 146r34 154r40
+5X9*Cle_Presente_Exception 2|52r19
+6X9*Cle_Absente_Exception 2|71r23 78r23 94r23 100r23
+9U19*Initialiser 9<31 2|11b15 14l9 14t20
+9p31 Abr{3P14} 10r35 2|11b27 13m9
+14V18*Est_Vide{boolean} 10s25 14>28 20s51 50s25 2|18b14 21t8
+14p28 Abr{3P14} 2|18b24 20r17
+18V18*Taille{integer} 18>26 19r25 20r30 39s26 39s41 2|25b14 30s24 32s24 34s24
+. 34s60 37l9 37t15
+18p26 Abr{3P14} 20r61 2|25b22 27r13 29r15 30r32 31r15 32r33 34r31 34r68
+25U19*Inserer 25=28 25>49 25>70 2|41b15 55s13 57s13 60l9 60t16
+25p28 Abr{3P14} 26r36 2|41b24 43r12 43r49 44r16 45r17 46r17 48r17 49r17 51r15
+. 54r15 55r23 56r15 57r23
+25e49 Cle{character} 26r41 2|41b45 44r30 45r53 48r54 51r29 54r29 55r50 56r29
+. 57r51
+25i70 Donnee{integer} 26r48 2|41b66 46r56 49r56 55r56 57r57
+32U19*Modifier 32=29 32>50 32>71 2|64b15 73s17 80s17 83l9 83t17
+32p29 Abr{3P14} 33r36 2|64b25 66r12 67r13 69r15 70r16 73r26 76r16 77r16 80r27
+32e50 Cle{character} 33r41 2|64b46 66r26 69r29 73r51 76r30 80r53
+32i71 Donnee{integer} 33r48 2|64b67 67r31 73r55 80r57
+38U19*Supprimer 38=30 38>51 2|110b15 137l13 137t22
+38p30 Abr{3P14} 39r34 39r49 2|110b26
+38e51 Cle{character} 2|110b47
+44V18*La_Donnee{integer} 26s25 33s25 44>29 44>46 2|88b14 96s24 102s24 106l9
+. 106t18
+44p29 Abr{3P14} 2|88b25 90r12 91r20 92r15 93r16 96r34 98r15 99r16 102r36
+44e46 Cle{character} 2|88b42 90r26 92r29 96r60 98r29 102r63
+49U19*Vider 49=26 2|140b15 143l13 143t18
+49p26 Abr{3P14} 50r35 2|140b22
+54U19*Afficher 54>29 2|146b15 151l13 151t21
+54p29 Abr{3P14} 2|146b25
+66U19*Afficher_Debug 66>35 2|154b15 157l13 157t27
+66p35 Abr{3P14} 2|154b31
+70R14 T_Noeud 71r30 72c14 81e27 2|8r59
+74e25*Cle{character} 2|44r24 45m46 48m47 51r23 54r23 56r23 66r20 69r23 76r24
+. 90r20 92r23 98r23
+75i25*Donnee{integer} 2|46m46 49m47 67m21 91r28
+76p25*Sous_Arbre_Gauche{3P14} 2|29r23 32r41 34r39 43r20 48r25 49r25 57m31
+. 77r24 80m35 99r24 102r44
+77p25*Sous_Arbre_Droit{3P14} 2|30r40 31r23 34r76 43r57 45r25 46r25 55m31
+. 70r24 73m34 93r24 96r42 113r24 116r41
+X 2 abr.adb
+7U19 Free[13|20]
+111V18 max_abrg{1|3P14} 111b18 111>27 116s24 118l13 118t21
+111p27 Abr{1|3P14} 113r16 114r24 116r33
+X 3 ada.ads
+16K9*Ada 2|1r6 1r34 2r6 2r34 3r6 8r21 3|19e8
+X 6 a-inteio.ads
+18K13*Integer_Text_IO[11|45] 2|2w10 2r38
+X 10 a-textio.ads
+49K13*Text_IO 2|1w10 1r38 10|471e16
+X 13 a-uncdea.ads
+17+9 Object 2|8r49
+18P9 Name(17+9) 2|8r68
+20u15*Unchecked_Deallocation 2|3w10 8r25
+
