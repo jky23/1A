@@ -1,0 +1,13 @@
+Question 1 : 
+Pour ./main -n 500 -m 20 -per 0.1 -imat 2 -v 11 -disp 1  
+Les résultats pour la puissance itérée avec deflation sont : Time =   0.65799999237060547  
+tandis que ceux pour DSYEV sont :  Time =   0.10100000351667404 .
+On remarque que l'algorithme DSEYV est meilleur.
+
+Question 2 :
+L'algorithme de la puissance itérée est plus lent à cause du calcul sequentiel des valeurs propres : en effet on a besoin de
+la 1ere  valeur propre pour calculer la suivante et ainsi de suite , alors que DSEYV calcule toutes les valeurs propres à la fois.
+
+Question 4 : 
+Cela ne pose pas de problemes parce que H est une matrice de dimensions égal au nombre 
+de valeurs propres que l'on veut retourner.
